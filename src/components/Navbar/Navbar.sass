@@ -1,0 +1,64 @@
+@import "../../assets/BasicColorsAndFonts.sass"
+
+.navbar
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  background-color: $navbar-color
+  width: 64px
+  &__burger 
+    display: block
+    position: relative
+    width: 26px
+    height: 19px
+    cursor: pointer
+    margin: 37px 20px 0px 20px
+    &::before,
+    &::after 
+      content: ''
+      background-color: rgb(255, 255, 255)
+      position: absolute
+      width: 26px
+      height: 3px
+      left: 0
+      border-radius: 20px
+    &::before 
+      top: 0
+    &::after 
+      bottom: 0
+    span 
+      position: absolute
+      background-color: rgb(255, 255, 255)
+      left: 0
+      width: 26px
+      height: 3px
+      top: 8px
+      border-radius: 20px
+  &__language_rus
+    font-family: $bold
+    height: 48px
+    width: 48px
+    color: $main-accent
+    font-size: 13px
+    border-radius: 50%
+    position: relative
+    margin: 0 auto 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    &:hover
+      border: 1px solid white
+      color: white
+      cursor: pointer
+    &:active
+      color: $main-accent
+      
+      
+      
+    
+    
+    
+    
+    
+  
+  

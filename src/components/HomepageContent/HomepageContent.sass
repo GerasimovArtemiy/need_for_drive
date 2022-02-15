@@ -1,0 +1,62 @@
+@import "../../assets/BasicColorsAndFonts.sass"
+
+.homepage
+    &__content
+        display: flex
+        flex: 1 1 auto
+        flex-direction: column
+        margin: 0 64px
+    &__header
+        display: flex
+        justify-content: space-between
+        margin: 32px 0px 163px 0px
+        &_logo
+            font-family: $bold
+            color: $main-accent
+            font-size: 30px
+        &_city            
+            display: flex
+            align-items: center
+            &-mark
+                height: 18px
+                width: 15px
+                color: green
+                margin-right: 4px
+                fill: green 
+            & div
+                color: $gray-dark
+                font-size: 14px
+    &__main
+        flex: 1 1 auto 
+        height: 100% 
+        & h1, h2
+            font-size: 70px
+            font-family: $bold
+        & h2           
+            color: $main-accent
+            margin-bottom: 30px
+        & h3 
+            font-size: 26px
+            color: $gray-dark
+            margin-bottom: 60px
+    &__btn
+        color: white
+        font-size: 18px  
+        font-family: $medium  
+        background: $button-default
+        height: 48px
+        width: 250px
+        border-radius: 8px       
+    &__footer
+        display: flex
+        justify-content: space-between
+        font-family: $medium
+        font-size: 13px
+        margin-bottom: 30px
+        & :first-child
+            color: $gray-dark           
+        & :last-child
+            color: $main-black
+            
+        
+    
