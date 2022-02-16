@@ -1,0 +1,111 @@
+@import "../../assets/BasicColorsAndFonts.sass"
+
+.swiper 
+    max-width: 688px
+    height: 811px
+    transition-duration: 1.5s
+    &-slide 
+        font-size: 18px
+        background: #fff
+    &__slide_content
+            max-width: 496px
+            margin: 0 auto
+            color: white
+    &__slide_title
+        font-size: 40px
+        font-family: $medium
+        margin: 237px 0 8px 0
+    &__slide_subtitle
+        font-size: 24px
+        font-family: $light
+        margin-bottom: 32px
+        color: $gray-light
+    &__slide_btn
+        width: 164px
+        height: 48px
+        color: white
+        font-family: $medium
+        font-size: 18px
+        border-radius: 4px
+        transition: 0.3s
+        &:hover
+            border-radius: 10px
+        
+        &-1
+            background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%)
+            &:hover 
+                background: linear-gradient(90deg, #114138 0%, #0b6417 100%)
+            &:active
+                background: linear-gradient(90deg, #103a32 0%, #0a5313 100%)
+        
+        &-2
+            background: linear-gradient(90deg, #132949 0%, #0C7B67 100%)
+            &:hover
+                background: linear-gradient(90deg, #11233d 0%, #0a5e4e 100%)
+            &:active
+                background: linear-gradient(90deg, #0e1d31 0%, #084d40 100%)
+        
+        &-3
+            background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%)
+            &:hover 
+                background: linear-gradient(90deg, #412b12 0%, #640c31 100%)
+            &:active
+                background: linear-gradient(90deg, #3b2710 0%, #470823 100%)
+       
+        &-4
+            background: linear-gradient(90deg, #281349 0%, #720C7B 100%)
+            &:hover 
+                background: linear-gradient(90deg, #22103f 0%, #610b69 100%)
+            &:active
+                background: linear-gradient(90deg, #1c0d33 0%, #550a5c 100%)     
+    &__slide-1
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../../assets/img/slider_1.jpg') center       
+    &__slide-2
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../../assets/img/slider_2.jpg') center
+    &__slide-3
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../../assets/img/slider_3.jpg') center
+    &__slide-4
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%), url('../../assets/img/slider_4.jpg') center
+    &-pagination-bullet        
+        background: var(--swiper-pagination-bullet-inactive-color, $gray-light);
+        opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+        &-active
+            background-color: $main-accent       
+    &-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal 
+        bottom: 30px
+        left: 0
+        width: 100%        
+    &-button-next, .swiper-button-prev
+        position: absolute
+        height: 100%
+        width: 64px
+        top: 22px 
+        color: $gray-dark       
+        &:hover
+            background-color: rgba(14, 194, 97, 0.2)
+    &-button-next
+        right: 0 
+    &-button-prev
+        left: 0 
+            
+@media screen and (max-width: 1440px)
+    .swiper 
+        max-width: 410px
+        &__slide_content
+            margin: 0 64px
+        &__slide_title
+            font-size: 32px
+            margin: 277px 0 8px 0
+        &__slide_subtitle
+            font-size: 22px
+
+@media screen and (max-width: 1024px)
+    .slider
+        display: none
+       
+
+
+
+
+        
+    
