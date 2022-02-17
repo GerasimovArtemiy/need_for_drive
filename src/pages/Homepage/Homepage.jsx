@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Homepage.sass';
 import HomepageContent from '../../components/HomepageContent/HomepageContent';
 import HomepageSlider from '../../components/HomepageSlider/HomepageSlider';
