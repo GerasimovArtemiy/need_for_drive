@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/need_for_drive/static/css/main.b4b86e33.css",
-    "main.js": "/need_for_drive/static/js/main.c4b91a75.js",
+    "main.css": "/need_for_drive/static/css/main.aed9d4a7.css",
+    "main.js": "/need_for_drive/static/js/main.5f94df85.js",
     "static/js/787.859d4105.chunk.js": "/need_for_drive/static/js/787.859d4105.chunk.js",
     "static/media/Roboto-Bold.svg": "/need_for_drive/static/media/Roboto-Bold.43841e35c236fddb18f1.svg",
     "static/media/Roboto-Light.svg": "/need_for_drive/static/media/Roboto-Light.094e956d58ab400956e2.svg",
@@ -24,12 +24,12 @@
     "static/media/telegram_icon.svg": "/need_for_drive/static/media/telegram_icon.d66af5aef698b77697d36fe854bd82bf.svg",
     "index.html": "/need_for_drive/index.html",
     "static/media/facebook_icon.svg": "/need_for_drive/static/media/facebook_icon.37306b1c83f9d84a8d7069985b0cfe0c.svg",
-    "main.b4b86e33.css.map": "/need_for_drive/static/css/main.b4b86e33.css.map",
-    "main.c4b91a75.js.map": "/need_for_drive/static/js/main.c4b91a75.js.map",
+    "main.aed9d4a7.css.map": "/need_for_drive/static/css/main.aed9d4a7.css.map",
+    "main.5f94df85.js.map": "/need_for_drive/static/js/main.5f94df85.js.map",
     "787.859d4105.chunk.js.map": "/need_for_drive/static/js/787.859d4105.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4b86e33.css",
-    "static/js/main.c4b91a75.js"
+    "static/css/main.aed9d4a7.css",
+    "static/js/main.5f94df85.js"
   ]
 }
