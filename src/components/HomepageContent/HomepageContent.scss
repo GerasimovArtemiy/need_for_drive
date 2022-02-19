@@ -1,0 +1,148 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.homepage {
+    overflow: hidden;
+    &__content {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        margin: 0 64px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin: 32px 0px 163px 0px;
+        &_logo {
+            font-family: $bold;
+            color: $main-accent;
+            font-size: 30px;
+        }
+        &_city {
+            display: flex;
+            align-items: center;
+            &-mark {
+                height: 20px;
+                margin-right: 4px;
+            }
+            & div {
+                color: $gray-dark;
+                font-size: 14px;
+            }
+        }
+    }
+    &__main {
+        flex: 1 1 auto;
+        height: 100%;
+        & h1,
+        h2 {
+            font-size: 70px;
+            font-family: $bold;
+        }
+        & h2 {
+            color: $main-accent;
+            margin-bottom: 30px;
+        }
+        & h3 {
+            font-size: 26px;
+            color: $gray-dark;
+            margin-bottom: 60px;
+        }
+    }
+    &__btn {
+        color: white;
+        font-size: 18px;
+        font-family: $medium;
+        background: $button-default;
+        height: 48px;
+        width: 250px;
+        border-radius: 8px;
+        transition-duration: 0.3s;
+        &:hover {
+            background: $button-hover;
+            border-radius: 15px;
+        }
+        &:active {
+            background: $button-active;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        font-family: $medium;
+        font-size: 13px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+        & :first-child {
+            color: $gray-dark;
+        }
+        & :last-child {
+            color: $main-black;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .homepage {
+        &__content {
+            margin: 0 32px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .homepage {
+        &__content {
+            margin: 0px;
+        }
+        &__header {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin: 16px 16px 34px 16px;
+        }
+        &_logo {
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        &__main {
+            & h1,
+            h2 {
+                font-size: 32px;
+                margin-left: 16px;
+            }
+            & h1 {
+                margin-bottom: 8px;
+            }
+            & h2 {
+                margin-bottom: 16px;
+            }
+            & h3 {
+                font-size: 18px;
+                margin: 0 0 32px 16px;
+            }
+        }
+        &__btn {
+            width: 100%;
+            border-radius: 0px;
+            height: 50px;
+        }
+        &:hover {
+            background: $button-hover;
+            border-radius: 0px;
+        }
+        &__footer {
+            margin: 0;
+            background-color: $main-black;
+            flex-direction: column-reverse;
+            align-items: end;
+            padding: 16px;
+        }
+        & :first-child {
+            color: $gray-light;
+            font-family: $light;
+            margin-top: 9px;
+        }
+        & :last-child {
+            color: $main-accent;
+            font-family: $light;
+        }
+    }
+}

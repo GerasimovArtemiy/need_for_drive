@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import './LanguageButton.sass';
+import { useState } from 'react';
+import './LanguageButton.scss';
 
-const LanguageButton = () => {
+export default function LanguageButton() {
     const [changeLanguage, setChangeLanguageActive] = useState(false);
     return (
         <>
             <div
+                role="button"
+                tabIndex={0}
                 onClick={() => setChangeLanguageActive(!changeLanguage)}
+                onKeyDown={() => setChangeLanguageActive(!changeLanguage)}
                 className={
                     changeLanguage
                         ? 'navbar__language'
@@ -16,7 +19,10 @@ const LanguageButton = () => {
                 <span>Рус</span>
             </div>
             <div
+                role="button"
+                tabIndex={0}
                 onClick={() => setChangeLanguageActive(!changeLanguage)}
+                onKeyDown={() => setChangeLanguageActive(!changeLanguage)}
                 className={
                     !changeLanguage
                         ? 'navbar__language'
@@ -27,6 +33,4 @@ const LanguageButton = () => {
             </div>
         </>
     );
-};
-
-export default LanguageButton;
+}

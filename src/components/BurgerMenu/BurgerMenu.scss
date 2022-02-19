@@ -1,0 +1,94 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.burger__menu {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1440px;
+    color: white;
+    background: rgba(21, 27, 31, 0.81);
+    z-index: 2;
+    transform: translateY(-100%);
+    transition: 0.5s;
+    &_main {
+        width: 753px;
+        height: 100%;
+        background-color: rgba(17, 21, 24, 1);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_content {
+        width: 497px;
+        font-size: 32px;
+        font-family: $medium;
+        & ul {
+            margin-bottom: 38px;
+        }
+        & li {
+            margin-bottom: 20px;
+        }
+        & a {
+            text-decoration: none;
+            color: white;
+            transition: 0.2s;
+            &:hover {
+                color: $main-accent;
+            }
+        }
+    }
+    &_icon-telegram,
+    .burger__menu_icon-facebook,
+    .burger__menu_icon-instagram {
+        height: 32px;
+        width: 32px;
+        margin-right: 24px;
+        cursor: pointer;
+    }
+    &_icon-telegram *:hover,
+    .burger__menu_icon-facebook *:hover,
+    .burger__menu_icon-instagram *:hover {
+        fill: $main-accent;
+        transition: 0.2s;
+    }
+    &_active {
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width: 1440px) {
+    .burger__menu {
+        width: 100%;
+        &_main {
+            width: 617px;
+        }
+        &_content {
+            width: 420px;
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .burger__menu {
+        &_main {
+            width: 100%;
+        }
+        &_content {
+            width: 575px;
+            font-size: 28px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .burger__menu {
+        &_main {
+            width: 100%;
+            display: block;
+        }
+        &_content {
+            margin: 80px 0 0 26px;
+            width: 575px;
+            font-size: 22px;
+        }
+    }
+}

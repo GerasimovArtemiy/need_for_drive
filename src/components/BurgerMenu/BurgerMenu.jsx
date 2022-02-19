@@ -1,16 +1,18 @@
-import React from 'react';
-import './BurgerMenu.sass';
+import './BurgerMenu.scss';
+import PropTypes from 'prop-types';
 import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook_icon.svg';
 import { ReactComponent as InstagramIcon } from '../../assets/icons/instagram_icon.svg';
 import { ReactComponent as TelegramIcon } from '../../assets/icons/telegram_icon.svg';
+import { menuLinks } from '../constants';
 
-const BurgerMenu = ({ active }) => {
-    const menuLinks = [
-        { value: 'ПАРКОВКА', href: '#' },
-        { value: 'СТРАХОВКА', href: '#' },
-        { value: 'БЕНЗИН', href: '#' },
-        { value: 'ОБСЛУЖИВАНИЕ', href: '#' },
-    ];
+export default function BurgerMenu({ active }) {
+    BurgerMenu.propTypes = {
+        active: PropTypes.bool,
+    };
+    BurgerMenu.defaultProps = {
+        active: false,
+    };
+
     return (
         <div
             className={
@@ -21,7 +23,7 @@ const BurgerMenu = ({ active }) => {
                 <div className="burger__menu_content">
                     <ul>
                         {menuLinks.map((i) => (
-                            <li>
+                            <li key={i.id}>
                                 <a href={i.href}>{i.value}</a>
                             </li>
                         ))}
@@ -35,6 +37,4 @@ const BurgerMenu = ({ active }) => {
             </div>
         </div>
     );
-};
-
-export default BurgerMenu;
+}
