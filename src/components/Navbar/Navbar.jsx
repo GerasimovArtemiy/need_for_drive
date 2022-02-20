@@ -7,28 +7,32 @@ export default function Navbar() {
     const [burgerActive, setBurgerActive] = useState(false);
 
     return (
-        <nav className="navbar">
+        <>
             <BurgerMenu active={burgerActive} />
-            <div
-                role="button"
-                tabIndex={0}
-                className="burger-wrapper"
-                onClick={() => setBurgerActive(!burgerActive)}
-                onKeyDown={() => setBurgerActive(!burgerActive)}
-            >
+            <nav className="navbar">
                 <div
-                    className={
-                        burgerActive
-                            ? 'navbar__burger_white'
-                            : ' navbar__burger_white navbar__burger_black'
-                    }
+                    role="button"
+                    tabIndex={0}
+                    className="burger-wrapper"
+                    onClick={() => setBurgerActive(!burgerActive)}
+                    onKeyDown={() => setBurgerActive(!burgerActive)}
                 >
-                    <span
-                        className={burgerActive ? 'navbar__burger_active' : ''}
-                    />
+                    <div
+                        className={`navbar__burger_white ${
+                            burgerActive
+                                ? 'navbar__burger_white'
+                                : 'navbar__burger_black'
+                        }`}
+                    >
+                        <span
+                            className={
+                                burgerActive ? 'navbar__burger_active' : ''
+                            }
+                        />
+                    </div>
                 </div>
-            </div>
-            <LanguageButton />
-        </nav>
+                <LanguageButton burgerActive={burgerActive} />
+            </nav>
+        </>
     );
 }

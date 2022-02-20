@@ -13,24 +13,24 @@
         justify-content: center;
         align-items: center;
         transition: 0.5s;
-    }
-    &:hover {
-        border: 1px solid white;
-        color: white;
-        cursor: pointer;
-    }
 
-    &:active {
-        color: $main-accent;
+        &:hover {
+            border: 1px solid white;
+            color: white;
+            cursor: pointer;
+        }
+        &:active {
+            color: $main-accent;
+        }
     }
-
-    &__change_language {
+    &__language_hide {
         display: none;
     }
 }
 @media screen and (max-width: 768px) {
     .navbar {
         &__language {
+            visibility: hidden;
             position: relative;
             z-index: 2;
             left: 14px;

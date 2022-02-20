@@ -5,10 +5,9 @@
         url('./assets/fonts/Roboto-Bold/Roboto-Bold.woff') format('woff'),
         url('./assets/fonts/Roboto-Bold/Roboto-Bold.ttf') format('truetype'),
         url('./assets/fonts/Roboto-Bold/Roboto-Bold.svg') format('svg');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Roboto-Medium';
     src: url('./assets/fonts/Roboto-Medium/Roboto-Medium.eot');
@@ -16,10 +15,20 @@
         url('./assets/fonts/Roboto-Medium/Roboto-Medium.woff') format('woff'),
         url('./assets/fonts/Roboto-Medium/Roboto-Medium.ttf') format('truetype'),
         url('./assets/fonts/Roboto-Medium/Roboto-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('./assets/fonts/Roboto-Regular/Roboto-Regular.eot');
+    src: local('☺'),
+        url('./assets/fonts/Roboto-Regular/Roboto-Regular.woff') format('woff'),
+        url('./assets/fonts/Roboto-Regular/Roboto-Regular.ttf')
+            format('truetype'),
+        url('./assets/fonts/Roboto-Regular/Roboto-Regular.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Roboto-Light';
     src: url('./assets/fonts/Roboto-Light/Roboto-Light.eot');
@@ -27,7 +36,7 @@
         url('./assets/fonts/Roboto-Light/Roboto-Light.woff') format('woff'),
         url('./assets/fonts/Roboto-Light/Roboto-Light.ttf') format('truetype'),
         url('./assets/fonts/Roboto-Light/Roboto-Light.svg') format('svg');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -115,8 +124,3 @@ h6 {
 .App {
     height: 100%;
 }
-
-/* [class*='__container'] {
-  max-width: 1440px;
-  margin: 0 auto;
-} */

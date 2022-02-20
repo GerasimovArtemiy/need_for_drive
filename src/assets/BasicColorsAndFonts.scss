@@ -11,6 +11,7 @@ $button-hover: linear-gradient(90deg, #0b934a 2.61%, #026e47 112.6%);
 $button-active: linear-gradient(90deg, #076432 2.61%, #013c27 112.6%);
 $button-selected: linear-gradient(90deg, #0b934a 2.61%, #026e47 112.6%);
 
-$bold: 'Roboto-Bold';
-$medium: 'Roboto-Medium';
-$light: 'Roboto-Light';
+$bold: 'Roboto-Bold', sans-serif;
+$medium: 'Roboto-Medium', sans-serif;
+$regular: 'Roboto-Regular', sans-serif;
+$light: 'Roboto-Light', sans-serif;

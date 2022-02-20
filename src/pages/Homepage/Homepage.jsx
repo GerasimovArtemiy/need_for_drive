@@ -10,7 +10,7 @@ export default function Homepage() {
     return (
         <div className="homepage">
             <Navbar />
-            <div className="homepage__container">
+            <div className="homepage__wrapper">
                 <HomepageContent />
                 <HomepageSlider />
             </div>

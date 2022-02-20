@@ -2,6 +2,7 @@
 
 .slider {
     width: 688px;
+    transition: 0.5s;
     &__items .slick-prev {
         height: 100%;
         width: 64px;
@@ -34,9 +35,9 @@
         }
     }
     &__items ul.slick-dots {
-        bottom: 23px;
+        bottom: 32px;
         & li {
-            width: 5px;
+            width: 6px;
             & button:before {
                 color: white;
                 opacity: 1;
@@ -58,21 +59,22 @@
             font-size: 40px;
             font-family: $medium;
             color: rgb(255, 255, 255);
-            margin: 237px 0 10px 0;
+            margin: 237px 0 12px 0;
         }
         &_subtitle {
             font-size: 24px;
+            color: $gray-light;
             font-family: $light;
-            line-height: 90%;
+            line-height: 95%;
             margin-bottom: 38px;
         }
         &_btn {
             height: 48px;
             width: 164px;
             border-radius: 4px;
-            color: white;
+            color: $gray-light;
             font-size: 18px;
-            font-family: $medium;
+            font-family: $regular;
             &-1 {
                 background: linear-gradient(90deg, #13493f 0%, #0c7b1b 100%);
                 &:hover {
@@ -162,5 +164,38 @@
         height: 811px;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
             url(../../assets/img/slider_4.jpg);
+    }
+}
+@media screen and (max-width: 1440px) {
+    .slider {
+        width: 410px;
+        &__items .slick-prev {
+            width: 32px;
+        }
+        &__items .slick-next {
+            width: 32px;
+        }
+        &__item {
+            &_content {
+                margin: 0 auto;
+                width: 282px;
+            }
+            &_title {
+                font-size: 32px;
+                line-height: 37px;
+                margin: 277px 0 10px 0;
+            }
+            &_subtitle {
+                font-size: 22px;
+                line-height: 100%;
+                font-family: $light;
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .slider {
+        display: none;
     }
 }

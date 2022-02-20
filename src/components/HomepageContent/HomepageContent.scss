@@ -3,10 +3,16 @@
 .homepage {
     overflow: hidden;
     &__content {
-        display: flex;
         flex: 1 1 auto;
+        display: flex;
+    }
+    &__container {
+        display: flex;
         flex-direction: column;
-        margin: 0 64px;
+        width: 1000px;
+        margin: 0 auto;
+        padding-left: 64px;
+        transition: 0.5s;
     }
     &__header {
         display: flex;
@@ -46,20 +52,19 @@
             font-size: 26px;
             color: $gray-dark;
             margin-bottom: 60px;
+            font-family: $light;
         }
     }
     &__btn {
         color: white;
         font-size: 18px;
-        font-family: $medium;
+        font-family: $regular;
         background: $button-default;
         height: 48px;
         width: 250px;
         border-radius: 8px;
-        transition-duration: 0.3s;
         &:hover {
             background: $button-hover;
-            border-radius: 15px;
         }
         &:active {
             background: $button-active;
@@ -68,45 +73,74 @@
     &__footer {
         display: flex;
         justify-content: space-between;
-        font-family: $medium;
+        font-family: $regular;
         font-size: 13px;
-        margin-bottom: 30px;
         transition: 0.3s;
+        margin-bottom: 32px;
         & :first-child {
             color: $gray-dark;
         }
         & :last-child {
             color: $main-black;
+            &:hover {
+                color: $main-accent;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1921px) {
+    .homepage {
+        width: 1920px;
+        margin: 0 auto;
+        &__container {
+            width: 1100px;
+        }
+    }
+}
+@media screen and (max-width: 1750px) {
+    .homepage {
+        &__container {
+            width: 624px;
         }
     }
 }
 @media screen and (max-width: 1440px) {
     .homepage {
-        &__content {
-            margin: 0 32px;
+        &__container {
+            width: 550px;
         }
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .homepage {
-        &__content {
-            margin: 0px;
+        &__container {
+            width: 703px;
+            padding-left: 85px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .homepage {
+        &__container {
+            width: 100%;
+            padding: 0;
         }
         &__header {
             display: flex;
             flex-direction: column;
             align-items: end;
-            margin: 16px 16px 34px 16px;
-        }
-        &_logo {
-            margin-bottom: 10px;
-            font-size: 30px;
+            margin: 16px 16px 36px 16px;
+            &_logo {
+                margin-bottom: 10px;
+                font-size: 30px;
+            }
         }
         &__main {
             & h1,
             h2 {
                 font-size: 32px;
-                margin-left: 16px;
+                margin: 0 16px;
             }
             & h1 {
                 margin-bottom: 8px;
@@ -116,33 +150,42 @@
             }
             & h3 {
                 font-size: 18px;
-                margin: 0 0 32px 16px;
+                margin: 0 16px 32px 16px;
+                line-height: 21px;
             }
         }
         &__btn {
             width: 100%;
             border-radius: 0px;
             height: 50px;
-        }
-        &:hover {
-            background: $button-hover;
-            border-radius: 0px;
+
+            &:hover {
+                background: $button-hover;
+                border-radius: 0px;
+            }
         }
         &__footer {
             margin: 0;
             background-color: $main-black;
             flex-direction: column-reverse;
             align-items: end;
-            padding: 16px;
-        }
-        & :first-child {
-            color: $gray-light;
-            font-family: $light;
-            margin-top: 9px;
-        }
-        & :last-child {
-            color: $main-accent;
-            font-family: $light;
+            padding: 18px;
+
+            & :first-child {
+                color: $gray-light;
+                font-family: $light;
+                margin-top: 9px;
+            }
+            & :last-child {
+                color: $main-accent;
+                font-family: $light;
+                &:hover {
+                    color: $gray-light;
+                }
+                &:active {
+                    color: white;
+                }
+            }
         }
     }
 }

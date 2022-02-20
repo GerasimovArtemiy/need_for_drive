@@ -83,7 +83,8 @@
 }
 @media screen and (max-width: 767px) {
     .navbar {
-        width: 0 &__burger_black {
+        width: 0;
+        &__burger_black {
             position: relative;
             display: block;
             width: 21px;
