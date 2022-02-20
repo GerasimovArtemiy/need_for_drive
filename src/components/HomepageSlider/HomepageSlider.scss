@@ -166,7 +166,7 @@
             url(../../assets/img/slider_4.jpg);
     }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .slider {
         width: 410px;
         &__items .slick-prev {
@@ -194,7 +194,7 @@
         }
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .slider {
         display: none;
     }

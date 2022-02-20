@@ -73,7 +73,7 @@
     z-index: 2;
     cursor: pointer;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .navbar {
         width: 85px;
         &__burger_white {
@@ -83,7 +83,7 @@
 }
 @media screen and (max-width: 767px) {
     .navbar {
-        width: 0;
+        width: 0px;
         &__burger_black {
             position: relative;
             display: block;

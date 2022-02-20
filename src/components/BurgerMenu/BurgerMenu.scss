@@ -60,7 +60,7 @@
         transform: translateY(0);
     }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .burger__menu {
         &_content {
             margin-left: 97px;
@@ -70,7 +70,7 @@
         }
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .burger__menu {
         &_content {
             font-size: 28px;
@@ -80,7 +80,7 @@
         }
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .burger__menu {
         &_main {
             align-items: stretch;

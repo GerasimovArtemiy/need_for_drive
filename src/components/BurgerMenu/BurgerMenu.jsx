@@ -1,24 +1,17 @@
 import './BurgerMenu.scss';
 import PropTypes from 'prop-types';
-import { menuLinks } from '../constants';
+import menuLinks from './constants';
 import MessengerIcons from './MessengerIcons';
 
 export default function BurgerMenu({ active }) {
-    BurgerMenu.propTypes = {
-        active: PropTypes.bool,
-    };
-    BurgerMenu.defaultProps = {
-        active: false,
-    };
-
     return (
         <div className={`burger__menu ${active ? 'burger__menu_active' : ''}`}>
             <div className="burger__menu_main">
                 <div className="burger__menu_content">
                     <ul>
-                        {menuLinks.map((i) => (
-                            <li key={i.id}>
-                                <a href={i.href}>{i.value}</a>
+                        {menuLinks.map(({ id, href, value }) => (
+                            <li key={id}>
+                                <a href={href}>{value}</a>
                             </li>
                         ))}
                     </ul>
@@ -29,3 +22,9 @@ export default function BurgerMenu({ active }) {
         </div>
     );
 }
+BurgerMenu.propTypes = {
+    active: PropTypes.bool,
+};
+BurgerMenu.defaultProps = {
+    active: false,
+};

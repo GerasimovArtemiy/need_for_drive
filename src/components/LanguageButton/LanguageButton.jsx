@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 import './LanguageButton.scss';
 
 export default function LanguageButton({ burgerActive }) {
-    LanguageButton.propTypes = {
-        burgerActive: PropTypes.bool,
-    };
-    LanguageButton.defaultProps = {
-        burgerActive: false,
-    };
     const [changeLanguage, setChangeLanguageActive] = useState(false);
     return (
         <div
@@ -23,3 +17,9 @@ export default function LanguageButton({ burgerActive }) {
         </div>
     );
 }
+LanguageButton.propTypes = {
+    burgerActive: PropTypes.bool,
+};
+LanguageButton.defaultProps = {
+    burgerActive: false,
+};

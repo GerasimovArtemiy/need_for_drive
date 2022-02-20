@@ -2,6 +2,8 @@
 
 .homepage {
     overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
     &__content {
         flex: 1 1 auto;
         display: flex;
@@ -9,9 +11,8 @@
     &__container {
         display: flex;
         flex-direction: column;
-        width: 1000px;
-        margin: 0 auto;
-        padding-left: 64px;
+        width: 100%;
+        margin: 0 64px 0 128px;
         transition: 0.5s;
     }
     &__header {
@@ -38,7 +39,6 @@
     }
     &__main {
         flex: 1 1 auto;
-        height: 100%;
         & h1,
         h2 {
             font-size: 70px;
@@ -89,48 +89,31 @@
         }
     }
 }
-@media screen and (min-width: 1921px) {
+@media screen and (max-width: 1439px) {
     .homepage {
-        width: 1920px;
-        margin: 0 auto;
         &__container {
-            width: 1100px;
+            margin: 0 32px 0 96px;
         }
     }
 }
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 1023px) {
     .homepage {
+        height: 100%;
         &__container {
-            width: 624px;
-        }
-    }
-}
-@media screen and (max-width: 1440px) {
-    .homepage {
-        &__container {
-            width: 550px;
-        }
-    }
-}
-@media screen and (max-width: 1024px) {
-    .homepage {
-        &__container {
-            width: 703px;
-            padding-left: 85px;
+            margin: 0 32px 0 117px;
         }
     }
 }
 @media screen and (max-width: 767px) {
     .homepage {
         &__container {
-            width: 100%;
-            padding: 0;
+            margin: 0;
         }
         &__header {
             display: flex;
             flex-direction: column;
             align-items: end;
-            margin: 16px 16px 36px 16px;
+            margin: 16px 16px 36px 0;
             &_logo {
                 margin-bottom: 10px;
                 font-size: 30px;
@@ -161,7 +144,6 @@
 
             &:hover {
                 background: $button-hover;
-                border-radius: 0px;
             }
         }
         &__footer {
@@ -173,12 +155,12 @@
 
             & :first-child {
                 color: $gray-light;
-                font-family: $light;
+                font-family: $regular;
                 margin-top: 9px;
             }
             & :last-child {
                 color: $main-accent;
-                font-family: $light;
+                font-family: $regular;
                 &:hover {
                     color: $gray-light;
                 }
