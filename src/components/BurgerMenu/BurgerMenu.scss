@@ -1,0 +1,93 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.burger__menu {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    color: white;
+    z-index: 2;
+    transform: translateX(-200%);
+    transition: 0.5s;
+    &_main {
+        flex: 1 1 auto;
+        height: 100%;
+        background-color: rgba(17, 21, 24, 1);
+        display: flex;
+        align-items: center;
+    }
+    &_empty {
+        height: 100%;
+        width: 47%;
+        background: rgba(21, 27, 31, 0.81);
+    }
+    &_content {
+        width: 497px;
+        font-size: 32px;
+        font-family: $medium;
+        margin-left: 128px;
+        & ul {
+            margin-bottom: 38px;
+        }
+        & li {
+            margin-bottom: 20px;
+        }
+        & a {
+            text-decoration: none;
+            color: white;
+            transition: 0.2s;
+            &:hover {
+                color: $main-accent;
+            }
+        }
+    }
+    &_icon-telegram,
+    .burger__menu_icon-facebook,
+    .burger__menu_icon-instagram {
+        height: 32px;
+        width: 32px;
+        margin-right: 24px;
+        cursor: pointer;
+    }
+    &_icon-telegram *:hover,
+    .burger__menu_icon-facebook *:hover,
+    .burger__menu_icon-instagram *:hover {
+        fill: $main-accent;
+        transition: 0.2s;
+    }
+    &_active {
+        transform: translateY(0);
+    }
+}
+@media screen and (max-width: 1439px) {
+    .burger__menu {
+        &_content {
+            margin-left: 97px;
+        }
+        &_empty {
+            width: 40%;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .burger__menu {
+        &_content {
+            font-size: 28px;
+        }
+        &_empty {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .burger__menu {
+        &_main {
+            align-items: stretch;
+        }
+        &_content {
+            font-size: 22px;
+            margin: 80px 0 0 28px;
+        }
+    }
+}

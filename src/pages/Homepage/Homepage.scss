@@ -1,0 +1,13 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.homepage {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        overflow: hidden;
+    }
+}

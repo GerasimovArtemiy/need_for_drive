@@ -1,0 +1,175 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.homepage {
+    overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    &__content {
+        flex: 1 1 auto;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 64px 0 128px;
+        transition: 0.5s;
+        height: 100%;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        &_logo {
+            font-family: $bold;
+            color: $main-accent;
+            font-size: 30px;
+        }
+        &_city {
+            display: flex;
+            align-items: center;
+            &-mark {
+                height: 20px;
+                margin-right: 4px;
+            }
+            & div {
+                color: $gray-dark;
+                font-size: 14px;
+            }
+        }
+    }
+    &__main {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -65px;
+        & h1,
+        h2 {
+            font-size: 70px;
+            font-family: $bold;
+        }
+        & h2 {
+            color: $main-accent;
+            margin-bottom: 30px;
+        }
+        & h3 {
+            font-size: 26px;
+            color: $gray-dark;
+            margin-bottom: 60px;
+            font-family: $light;
+        }
+    }
+    &__btn {
+        color: white;
+        font-size: 18px;
+        font-family: $regular;
+        background: $button-default;
+        height: 48px;
+        width: 250px;
+        border-radius: 8px;
+        &:hover {
+            background: $button-hover;
+        }
+        &:active {
+            background: $button-active;
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        font-family: $regular;
+        font-size: 13px;
+        transition: 0.3s;
+        margin-bottom: 32px;
+        & :first-child {
+            color: $gray-dark;
+        }
+        & :last-child {
+            color: $main-black;
+            &:hover {
+                color: $main-accent;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1439px) {
+    .homepage {
+        &__container {
+            margin: 0 32px 0 96px;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .homepage {
+        &__container {
+            margin: 0 32px 0 117px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .homepage {
+        &__container {
+            margin: 0;
+        }
+        &__header {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin: 16px 16px 36px 0;
+            &_logo {
+                margin-bottom: 10px;
+                font-size: 30px;
+            }
+        }
+        &__main {
+            & h1,
+            h2 {
+                font-size: 32px;
+                margin: 0 16px;
+            }
+            & h1 {
+                margin-bottom: 8px;
+            }
+            & h2 {
+                margin-bottom: 16px;
+            }
+            & h3 {
+                font-size: 18px;
+                margin: 0 16px 32px 16px;
+                line-height: 21px;
+            }
+        }
+        &__btn {
+            width: 100%;
+            border-radius: 0px;
+            height: 50px;
+
+            &:hover {
+                background: $button-hover;
+            }
+        }
+        &__footer {
+            margin: 0;
+            background-color: $main-black;
+            flex-direction: column-reverse;
+            align-items: end;
+            padding: 18px;
+
+            & :first-child {
+                color: $gray-light;
+                font-family: $regular;
+                margin-top: 9px;
+            }
+            & :last-child {
+                color: $main-accent;
+                font-family: $regular;
+                &:hover {
+                    color: $gray-light;
+                }
+                &:active {
+                    color: white;
+                }
+            }
+        }
+    }
+}
