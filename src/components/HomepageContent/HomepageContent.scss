@@ -1,9 +1,6 @@
 @import '../../assets/BasicColorsAndFonts.scss';
 
 .homepage {
-    overflow: hidden;
-    max-width: 1920px;
-    margin: 0 auto;
     &__content {
         flex: 1 1 auto;
     }
@@ -92,6 +89,67 @@
         }
     }
 }
+@media screen and (min-width: 1930px) {
+    .homepage {
+        &__container {
+            margin: 0 80px 0 165px;
+        }
+        &__header {
+            margin-top: 41px;
+            &_logo {
+                font-size: 40px;
+            }
+            &_city {
+                &-mark {
+                    height: 26px;
+                    margin-right: 4px;
+                }
+                & div {
+                    font-size: 19px;
+                }
+            }
+        }
+        &__main {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: -65px;
+            & h1,
+            h2 {
+                font-size: 91px;
+            }
+            & h2 {
+                color: $main-accent;
+                margin-bottom: 39px;
+            }
+            & h3 {
+                font-size: 33px;
+                margin-bottom: 78px;
+            }
+        }
+        &__btn {
+            color: white;
+            font-size: 23px;
+            height: 60px;
+            width: 320px;
+            border-radius: 10px;
+        }
+        &__footer {
+            font-size: 17px;
+            & :first-child {
+                color: $gray-dark;
+            }
+            & :last-child {
+                color: $main-black;
+                &:hover {
+                    color: $main-accent;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 1439px) {
     .homepage {
         &__container {
@@ -122,6 +180,7 @@
             }
         }
         &__main {
+            margin-top: -150px;
             & h1,
             h2 {
                 font-size: 32px;

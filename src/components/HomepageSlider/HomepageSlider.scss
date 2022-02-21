@@ -178,6 +178,42 @@
             url(../../assets/img/slider_4.jpg) center / cover no-repeat;
     }
 }
+@media screen and (min-width: 1930px) {
+    .slider {
+        &__items {
+            & ul.slick-dots {
+                bottom: 32px;
+                & li {
+                    width: 10px;
+                    & button:before {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        &__item {
+            &_container {
+                margin-left: 126px;
+                max-width: 640px;
+            }
+            &_title {
+                font-size: 45px;
+                margin-bottom: 15px;
+            }
+            &_subtitle {
+                font-size: 27px;
+                line-height: 100%;
+                margin-bottom: 40px;
+            }
+            &_btn {
+                height: 55px;
+                width: 200px;
+                border-radius: 6px;
+                font-size: 22px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 1439px) {
     .slider {
         width: 40%;
