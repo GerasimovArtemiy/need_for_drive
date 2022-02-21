@@ -17,18 +17,20 @@ export default function HomepageSlider() {
         <div className="slider">
             <Slider {...settings}>
                 {slides.map(({ id, title, subtitle }) => (
-                    <div key={id} className={`slider__item-${id}`}>
+                    <div key={id} className={`slider__item slider__item-${id}`}>
                         <div className="slider__item_content">
-                            <h1 className="slider__item_title">{title}</h1>
-                            <h3 className="slider__item_subtitle">
-                                {subtitle}
-                            </h3>
-                            <button
-                                type="button"
-                                className={`slider__item_btn-${id} slider__item_btn`}
-                            >
-                                Подробнее
-                            </button>
+                            <div className="slider__item_container">
+                                <h1 className="slider__item_title">{title}</h1>
+                                <h3 className="slider__item_subtitle">
+                                    {subtitle}
+                                </h3>
+                                <button
+                                    type="button"
+                                    className={`slider__item_btn-${id} slider__item_btn`}
+                                >
+                                    Подробнее
+                                </button>
+                            </div>
                         </div>
                     </div>
                 ))}
