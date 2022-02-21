@@ -11,28 +11,6 @@
         transition: 0.5s;
         height: 100%;
     }
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 32px;
-        &_logo {
-            font-family: $bold;
-            color: $main-accent;
-            font-size: 30px;
-        }
-        &_city {
-            display: flex;
-            align-items: center;
-            &-mark {
-                height: 20px;
-                margin-right: 4px;
-            }
-            & div {
-                color: $gray-dark;
-                font-size: 14px;
-            }
-        }
-    }
     &__main {
         flex: 1 1 auto;
         display: flex;
@@ -94,21 +72,6 @@
         &__container {
             margin: 0 80px 0 165px;
         }
-        &__header {
-            margin-top: 41px;
-            &_logo {
-                font-size: 40px;
-            }
-            &_city {
-                &-mark {
-                    height: 26px;
-                    margin-right: 4px;
-                }
-                & div {
-                    font-size: 19px;
-                }
-            }
-        }
         &__main {
             flex: 1 1 auto;
             display: flex;
@@ -168,16 +131,6 @@
     .homepage {
         &__container {
             margin: 0;
-        }
-        &__header {
-            display: flex;
-            flex-direction: column;
-            align-items: end;
-            margin: 16px 16px 36px 0;
-            &_logo {
-                margin-bottom: 10px;
-                font-size: 30px;
-            }
         }
         &__main {
             margin-top: -150px;

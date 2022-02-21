@@ -1,21 +1,11 @@
+import Header from '../Header/Header';
 import './HomepageContent.scss';
-import mark from '../../assets/icons/markmap.svg';
 
 export default function HomepageContent() {
     return (
         <div className="homepage__content">
             <div className="homepage__container">
-                <header className="homepage__header">
-                    <div className="homepage__header_logo">Need for drive</div>
-                    <div className="homepage__header_city">
-                        <img
-                            className="homepage__header_city-mark"
-                            src={mark}
-                            alt="markmap"
-                        />
-                        <div>Ульяновск</div>
-                    </div>
-                </header>
+                <Header />
                 <main className="homepage__main">
                     <h1> Каршеринг </h1>
                     <h2> Need for drive</h2>

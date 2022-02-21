@@ -1,11 +1,8 @@
 .wrapper {
     height: 100%;
-    position: relative;
-    z-index: 1;
 }
 .content {
     display: flex;
     justify-content: space-between;
     height: 100%;
-    overflow: hidden;
 }
