@@ -11,7 +11,7 @@ export default function HomepageContent() {
                     <h1> Каршеринг </h1>
                     <h2> Need for drive</h2>
                     <h3>Поминутная аренда авто твоего города</h3>
-                    <Link to="/need_for_drive/order">
+                    <Link to="/need_for_drive/order/step_1">
                         <button type="button" className="homepage__btn">
                             Забронировать
                         </button>
