@@ -6,11 +6,7 @@ export default function Header() {
         <header className="homepage__header">
             <div className="homepage__header_logo">Need for drive</div>
             <div className="homepage__header_city">
-                <img
-                    className="homepage__header_city-mark"
-                    src={mark}
-                    alt="markmap"
-                />
+                <img className="homepage__header_city-mark" src={mark} alt="markmap" />
                 <div>Ульяновск</div>
             </div>
         </header>

@@ -1,9 +1,9 @@
-import Layout from './pages/Layout/Layout';
+import PageRoutes from './components/Routes/PageRoutes';
 
 function App() {
     return (
         <div className="App">
-            <Layout />
+            <PageRoutes />
         </div>
     );
 }

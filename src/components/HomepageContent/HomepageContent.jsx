@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import './HomepageContent.scss';
 
@@ -10,9 +11,11 @@ export default function HomepageContent() {
                     <h1> Каршеринг </h1>
                     <h2> Need for drive</h2>
                     <h3>Поминутная аренда авто твоего города</h3>
-                    <button type="button" className="homepage__btn">
-                        Забронировать
-                    </button>
+                    <Link to="/need_for_drive/order">
+                        <button type="button" className="homepage__btn">
+                            Забронировать
+                        </button>
+                    </Link>
                 </main>
                 <footer className="homepage__footer">
                     <div> © 2016-2019 «Need for drive»</div>

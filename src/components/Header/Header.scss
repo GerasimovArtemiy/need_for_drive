@@ -24,25 +24,6 @@
         }
     }
 }
-@media screen and (min-width: 1930px) {
-    .homepage {
-        &__header {
-            margin-top: 41px;
-            &_logo {
-                font-size: 40px;
-            }
-            &_city {
-                &-mark {
-                    height: 26px;
-                    margin-right: 4px;
-                }
-                & div {
-                    font-size: 19px;
-                }
-            }
-        }
-    }
-}
 @media screen and (max-width: 767px) {
     .homepage {
         &__header {

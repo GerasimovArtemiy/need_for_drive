@@ -1,0 +1,14 @@
+.order {
+    width: 100%;
+    &__container {
+        margin: 0 auto;
+        max-width: 1140px;
+    }
+    &__navigation {
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        height: 32px;
+        display: flex;
+        align-items: center;
+    }
+}

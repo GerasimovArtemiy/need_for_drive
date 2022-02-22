@@ -21,9 +21,7 @@ export default function HomepageSlider() {
                         <div className="slider__item_content">
                             <div className="slider__item_container">
                                 <h1 className="slider__item_title">{title}</h1>
-                                <h3 className="slider__item_subtitle">
-                                    {subtitle}
-                                </h3>
+                                <h3 className="slider__item_subtitle">{subtitle}</h3>
                                 <button
                                     type="button"
                                     className={`slider__item_btn-${id} slider__item_btn`}
