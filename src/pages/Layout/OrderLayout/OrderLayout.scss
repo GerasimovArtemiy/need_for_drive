@@ -1,18 +1,26 @@
 @import '../../../assets/BasicColorsAndFonts.scss';
 
-.order {
+.orderpage {
     width: 100%;
+    height: 100%;
+    &__wrapper {
+        height: 100%;
+    }
     &__container {
         margin: 0 auto;
-        max-width: 1140px;
+        padding: 32px 64px 0 128px;
+        max-width: 1439px;
+        position: relative;
+        height: 100%;
     }
     &__hr_top,
-    .order__hr_bot {
+    .orderpage__hr_bot {
         position: absolute;
         height: 1px;
         width: 100%;
         background: #eee;
         left: 0;
+        z-index: -1;
     }
     &__hr_top {
         top: 96px;
@@ -20,8 +28,12 @@
     &__hr_bot {
         top: 128px;
     }
-    &__arr {
-        width: 37px;
+    &__vr_right {
+        position: absolute;
+        border-right: 1px solid #eee;
+        height: 100%;
+        top: 96px;
+        left: 928px;
     }
     &__navigation {
         margin: 44px 0px;
@@ -29,6 +41,9 @@
         align-items: center;
         font-size: 14px;
         font-family: $bold;
+        &_arr {
+            width: 37px;
+        }
     }
 }
 .active {

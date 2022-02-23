@@ -1,6 +1,6 @@
 @import '../../assets/BasicColorsAndFonts.scss';
 
-.homepage {
+.homepage__content {
     height: 100%;
     width: 100%;
     position: relative;
@@ -11,7 +11,7 @@
     justify-content: space-between;
 }
 @media screen and (max-width: 1023px) {
-    .homepage {
+    .homepage__content {
         margin: 0;
     }
 }

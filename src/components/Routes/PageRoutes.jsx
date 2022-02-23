@@ -16,8 +16,8 @@ export default function PageRoutes() {
                 <Route index element={<Homepage />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Route>
-            <Route path="need_for_drive/order/" element={<OrderPage />}>
-                <Route index element={<OrderPage1 />} />
+            <Route path="need_for_drive/order" element={<OrderPage />}>
+                <Route path="step_1" element={<OrderPage1 />} />
                 <Route path="step_2" element={<OrderPage2 />} />
                 <Route path="step_3" element={<OrderPage3 />} />
                 <Route path="step_4" element={<OrderPage4 />} />

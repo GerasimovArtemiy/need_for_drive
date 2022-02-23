@@ -4,7 +4,7 @@ import './HomepageContent.scss';
 
 export default function HomepageContent() {
     return (
-        <div className="homepage__content">
+        <div className="homepage__section">
             <div className="homepage__container">
                 <Header />
                 <main className="homepage__main">

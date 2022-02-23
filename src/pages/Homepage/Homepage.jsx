@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.scss';
 
 export default function Homepage() {
     return (
-        <div className="homepage">
+        <div className="homepage__content">
             <HomepageContent />
             <HomepageSlider />
         </div>

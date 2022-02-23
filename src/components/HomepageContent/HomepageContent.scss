@@ -1,15 +1,16 @@
 @import '../../assets/BasicColorsAndFonts.scss';
 
 .homepage {
-    &__content {
+    &__section {
         flex: 1 1 auto;
+        display: flex;
     }
     &__container {
         display: flex;
+        flex: 1 1 auto;
         flex-direction: column;
-        margin: 0 64px 0 128px;
+        margin: 32px 64px 0 128px;
         transition: 0.5s;
-        height: 100%;
     }
     &__main {
         flex: 1 1 auto;
@@ -54,7 +55,7 @@
         font-family: $regular;
         font-size: 13px;
         transition: 0.3s;
-        margin-bottom: 32px;
+        margin-bottom: 36px;
         & :first-child {
             color: $gray-dark;
         }
@@ -70,7 +71,7 @@
 @media screen and (min-width: 1930px) {
     .homepage {
         &__container {
-            margin: 0 80px 0 165px;
+            margin: 32px 80px 0 165px;
         }
         &__main {
             flex: 1 1 auto;
@@ -116,21 +117,21 @@
 @media screen and (max-width: 1439px) {
     .homepage {
         &__container {
-            margin: 0 32px 0 96px;
+            margin: 32px 32px 0 96px;
         }
     }
 }
 @media screen and (max-width: 1023px) {
     .homepage {
         &__container {
-            margin: 0 32px 0 117px;
+            margin: 32px 32px 0 117px;
         }
     }
 }
 @media screen and (max-width: 767px) {
     .homepage {
         &__container {
-            margin: 0;
+            margin: 22px 0 0 0;
         }
         &__main {
             margin-top: -150px;
