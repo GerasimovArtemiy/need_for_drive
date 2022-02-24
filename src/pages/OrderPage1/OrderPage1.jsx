@@ -5,7 +5,7 @@ import googleMap from '../../assets/img/google-map.jpg';
 export default function OrderPage1() {
     return (
         <div className="orderpage__step-1">
-            <div className="orderpage__step-1_searches">
+            <form className="orderpage__step-1_searches">
                 <MyInput
                     label="Город"
                     type="search"
@@ -16,7 +16,7 @@ export default function OrderPage1() {
                     type="search"
                     placeholder="Начните вводить пункт ..."
                 />
-            </div>
+            </form>
             <div className="orderpage__step-1_map">
                 <h2>Выбрать на карте:</h2>
                 <img src={googleMap} alt="map" />

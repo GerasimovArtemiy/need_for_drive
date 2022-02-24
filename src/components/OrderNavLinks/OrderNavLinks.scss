@@ -21,6 +21,9 @@
         align-items: center;
         font-size: 14px;
         font-family: $medium;
+        &_item {
+            display: flex;
+        }
 
         &_arr {
             width: 37px;
@@ -32,4 +35,41 @@
 }
 .active {
     color: $main-accent;
+}
+@media screen and (max-width: 767px) {
+    .orderpage {
+        &__navigation {
+            padding: 0 16px;
+            &_item {
+                flex: 1 1 auto;
+            }
+            &_arr {
+                width: 100%;
+            }
+        }
+        &__hr_top {
+            top: 94px;
+        }
+        &__hr_bot {
+            top: 126px;
+        }
+    }
+}
+@media screen and (max-width: 390px) {
+    .orderpage {
+        &__navigation {
+            &_item {
+                flex: 0 0 auto;
+            }
+            &_arr {
+                width: 20px;
+            }
+            & :nth-child(5) {
+                & :first-child {
+                    width: 26px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
 }

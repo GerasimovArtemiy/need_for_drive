@@ -1,9 +1,17 @@
+import { useState } from 'react';
+import YourOrderArrow from './YourOrderArrow/YourOrderArrow';
 import './YourOrderSection.scss';
 
 export default function YourOrderSection() {
+    const [yourOrderActive, setYourOrderActive] = useState(false);
     return (
-        <div className="orderpage__your-order_section">
-            <section className="orderpage__your-order">
+        <div
+            className={`orderpage__your-order ${
+                !yourOrderActive ? '' : 'orderpage__your-order_active'
+            }`}
+        >
+            <section className="orderpage__your-order_section">
+                <YourOrderArrow active={yourOrderActive} setActive={setYourOrderActive} />
                 <h2>Ваш заказ:</h2>
                 <div className="orderpage__your-order_point">
                     <div>Пункт выдачи</div>

@@ -9,12 +9,23 @@ export default function OrderNavLinks() {
             <hr className="orderpage__hr_bot" />
             <hr className="orderpage__hr_top" />
             {orderNavigationLinks.map(({ id, href, linkName }) => (
-                <>
-                    <NavLink key={id} className="orderpage__navigation_link" to={href}>
-                        {linkName}
-                    </NavLink>
-                    {id === 4 ? '' : <OrderArrNav className="orderpage__navigation_arr" />}
-                </>
+                <div className="orderpage__navigation_item">
+                    <div className="orderpage__navigation_links">
+                        <NavLink
+                            key={id}
+                            className="orderpage__navigation_link"
+                            to={href}
+                        >
+                            {linkName}
+                        </NavLink>
+                    </div>
+
+                    {id === 4 ? (
+                        ''
+                    ) : (
+                        <OrderArrNav className="orderpage__navigation_arr" />
+                    )}
+                </div>
             ))}
         </div>
     );
