@@ -1,1 +1,15 @@
-
+.orderpage__step-1 {
+    &_searches {
+        width: 325px;
+    }
+    &_map {
+        margin-top: 48px;
+        & h2 {
+            margin-bottom: 16px;
+        }
+        img {
+            max-width: 732px;
+            width: 100%;
+        }
+    }
+}

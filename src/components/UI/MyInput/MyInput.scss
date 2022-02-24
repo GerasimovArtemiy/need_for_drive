@@ -1,0 +1,15 @@
+@import '../../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__step-1_search {
+    font-family: $regular;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 13px;
+    text-align: right;
+    & input {
+        border-bottom: 2px solid $gray-dark;
+        margin-left: 8px;
+        width: 224px;
+        padding-left: 10px;
+    }
+}
