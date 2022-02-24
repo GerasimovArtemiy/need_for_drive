@@ -1,0 +1,58 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.orderpage {
+    &__your-order {
+        margin: 32px 0 0 32px;
+        display: flex;
+        flex-direction: column;
+        color: $main-black;
+        &_section {
+            border-left: 1px solid #eee;
+            flex: 1 1 auto;
+        }
+        & h2 {
+            letter-spacing: 0.2px;
+            align-self: end;
+            margin-bottom: 26px;
+            font-family: $medium;
+            font-size: 18px;
+        }
+        &_point {
+            margin-bottom: 32px;
+            font-family: $regular;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            & :nth-child(1) {
+                align-self: flex-end;
+                width: 91px;
+            }
+            & :nth-child(2) {
+                flex: 1 1 auto;
+                border-bottom: 1px dotted $gray-dark;
+                margin: 0 12px;
+            }
+            & :nth-child(3) {
+                text-align: right;
+                line-height: 16px;
+                color: $gray-dark;
+                width: 102px;
+            }
+        }
+        &_price {
+            font-size: 16px;
+            margin-bottom: 32px;
+            & span {
+                font-family: $bold;
+            }
+        }
+        &_btn {
+            height: 48px;
+            border-radius: 8px;
+            background-color: #eee;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-family: $medium;
+        }
+    }
+}

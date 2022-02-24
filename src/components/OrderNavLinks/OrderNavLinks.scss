@@ -1,0 +1,35 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+.orderpage {
+    &__hr_top,
+    .orderpage__hr_bot {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background: #eee;
+        left: 0;
+        z-index: -1;
+    }
+    &__hr_top {
+        top: 96px;
+    }
+    &__hr_bot {
+        top: 128px;
+    }
+    &__navigation {
+        margin: 44px 0 7px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-family: $bold;
+
+        &_arr {
+            width: 37px;
+        }
+        &_link {
+            color: $gray-dark;
+        }
+    }
+}
+.active {
+    color: $main-accent;
+}
