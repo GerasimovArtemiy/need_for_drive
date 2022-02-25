@@ -9,6 +9,13 @@
     width: 64px;
     height: 100%;
     transition: 1s;
+
+    @media screen and (max-width: 1023px) {
+        width: 85px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 0px;
+    }
     &__burger_white {
         position: relative;
         display: block;
@@ -17,6 +24,10 @@
         cursor: pointer;
         margin: 42px auto 0;
         transition: 1s;
+
+        @media screen and (max-width: 1023px) {
+            width: 34px;
+        }
     }
 
     &__burger_white span,
@@ -65,24 +76,9 @@
     &__burger_white span.navbar__burger_active {
         background: rgba(255, 255, 255, 0);
     }
-}
-.burger-wrapper {
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-}
-@media screen and (max-width: 1023px) {
-    .navbar {
-        width: 85px;
-        &__burger_white {
-            width: 34px;
-        }
-    }
-}
-@media screen and (max-width: 767px) {
-    .navbar {
-        width: 0px;
-        &__burger_black {
+
+    &__burger_black {
+        @media screen and (max-width: 767px) {
             position: relative;
             display: block;
             width: 21px;
@@ -90,9 +86,11 @@
             cursor: pointer;
             transition: 1s;
         }
-        &__burger_black span,
-        .navbar__burger_black span:before,
-        .navbar__burger_black span:after {
+    }
+    &__burger_black span,
+    .navbar__burger_black span:before,
+    .navbar__burger_black span:after {
+        @media screen and (max-width: 767px) {
             width: 100%;
             position: absolute;
             height: 3px;
@@ -101,52 +99,56 @@
             transition: 0.3s;
             border-radius: 5px;
         }
-        &__burger_black span:before {
+    }
+    &__burger_black span:before {
+        @media screen and (max-width: 767px) {
             content: '';
             top: -9px;
             transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
         }
-        &__burger_black span {
+    }
+    &__burger_black span {
+        @media screen and (max-width: 767px) {
             top: 0;
         }
-        &__burger_black span:after {
+    }
+    &__burger_black span:after {
+        @media screen and (max-width: 767px) {
             content: '';
             bottom: -9px;
             transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
         }
-        &__burger_black span.navbar__burger_active:before {
+    }
+    &__burger_black span.navbar__burger_active:before {
+        @media screen and (max-width: 767px) {
             content: '';
             top: 0px;
             transform: rotate(45deg);
             transition: top 300ms,
                 transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        &__burger_black span.navbar__burger_active:after {
+    }
+    &__burger_black span.navbar__burger_active:after {
+        @media screen and (max-width: 767px) {
             content: '';
             bottom: 0;
             transform: rotate(-45deg);
             transition: bottom 300ms,
                 transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        &__burger_black span.navbar__burger_active {
+    }
+    &__burger_black span.navbar__burger_active {
+        @media screen and (max-width: 767px) {
             background: rgba(255, 255, 255, 0);
         }
-        &__burger_white {
-            margin: 0;
-            width: 21px;
-        }
-        &__burger_white span:before {
-            top: -8px;
-        }
-        &__burger_white span {
-            top: 34px;
-            left: 21px;
-        }
-        &__burger_white span:after {
-            bottom: -8px;
-        }
     }
-    .burger-wrapper {
+}
+.burger-wrapper {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+
+    @media screen and (max-width: 767px) {
         width: 50px;
         height: 70px;
     }

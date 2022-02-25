@@ -4,11 +4,32 @@
     &__your-order {
         border-left: 1px solid #eee;
         width: 320px;
+
+        @media screen and (max-width: 767px) {
+            position: absolute;
+            right: 0;
+            top: 1px;
+            background: white;
+            height: 100%;
+            transform: translateX(87%);
+            transition: 0.4s;
+        }
+        &_active {
+            @media screen and (max-width: 767px) {
+                transform: translateX(0);
+                border-left: 2px solid $main-accent;
+                border-top: 1px solid $main-accent;
+            }
+        }
         &_section {
             margin: 32px 0 0 32px;
             display: flex;
             flex-direction: column;
             color: $main-black;
+
+            @media screen and (max-width: 767px) {
+                margin: 32px 16px 0 16px;
+            }
         }
         & h2 {
             letter-spacing: 0.2px;
@@ -32,6 +53,10 @@
                 border-bottom: 1px dotted $gray-dark;
                 margin: 0 12px;
                 min-width: 8px;
+
+                @media screen and (max-width: 1439px) {
+                    margin: 0 5px;
+                }
             }
             & :nth-child(3) {
                 text-align: right;
@@ -54,49 +79,10 @@
             color: rgb(255, 255, 255);
             font-size: 18px;
             font-family: $medium;
-        }
-    }
-}
-@media screen and (max-width: 1439px) {
-    .orderpage {
-        &__your-order {
-            &_point {
-                & :nth-child(2) {
-                    border-bottom: 1px dotted $gray-dark;
-                    margin: 0 5px;
-                    min-width: 8px;
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 1023px) {
-    .orderpage {
-        &__your-order {
-            &_btn {
+
+            @media screen and (max-width: 1023px) {
                 font-size: 16px;
                 height: 42px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 767px) {
-    .orderpage {
-        &__your-order {
-            position: absolute;
-            right: 0;
-            top: 1px;
-            background: white;
-            height: 100%;
-            transform: translateX(87%);
-            transition: 0.4s;
-            &_active {
-                transform: translateX(0);
-                border-left: 2px solid $main-accent;
-                border-top: 1px solid $main-accent;
-            }
-            &_section {
-                margin: 32px 16px 0 16px;
             }
         }
     }

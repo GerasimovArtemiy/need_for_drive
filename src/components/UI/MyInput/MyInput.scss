@@ -6,28 +6,31 @@
     line-height: 16px;
     margin-bottom: 13px;
     text-align: right;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+        margin-right: 83px;
+    }
+    & label {
+        @media screen and (max-width: 767px) {
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
     & input {
         border-bottom: 1px solid $gray-dark;
         margin-left: 8px;
         width: 224px;
         padding-left: 10px;
-        &::placeholder {
-            color: $gray-dark;
-        }
-    }
-}
-@media screen and (max-width: 767px) {
-    .orderpage__step-1_search {
-        text-align: center;
-        margin-right: 83px;
-        & label {
-            display: block;
-            margin-bottom: 8px;
-        }
-        & input {
+
+        @media screen and (max-width: 767px) {
             display: block;
             width: 100%;
             margin-bottom: 22px;
+        }
+
+        &::placeholder {
+            color: $gray-dark;
         }
     }
 }

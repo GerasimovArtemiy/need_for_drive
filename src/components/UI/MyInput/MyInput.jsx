@@ -15,7 +15,7 @@ MyInput.propTypes = {
     type: PropTypes.string,
 };
 MyInput.defaultProps = {
-    label: 'Город',
+    label: 'Заголовок',
     placeholder: 'Начните вводить...',
     type: 'text',
 };

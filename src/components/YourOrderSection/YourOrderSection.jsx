@@ -7,7 +7,7 @@ export default function YourOrderSection() {
     return (
         <div
             className={`orderpage__your-order ${
-                !yourOrderActive ? '' : 'orderpage__your-order_active'
+                yourOrderActive ? 'orderpage__your-order_active' : ''
             }`}
         >
             <section className="orderpage__your-order_section">

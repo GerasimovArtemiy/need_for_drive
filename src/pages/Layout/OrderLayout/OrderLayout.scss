@@ -8,34 +8,28 @@
         padding: 32px 64px 0 128px;
         max-width: 1439px;
         height: 100%;
+
+        @media screen and (max-width: 1023px) {
+            padding: 32px 32px 0 117px;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 0;
+            margin: 22px 0 0 0px;
+        }
     }
     &__content {
         display: flex;
         justify-content: space-between;
         height: 100%;
+
+        @media screen and (max-width: 767px) {
+            position: relative;
+            overflow: hidden;
+        }
     }
     &__main {
         margin-top: 32px;
         max-width: 928px;
         flex: 1 1 auto;
-    }
-}
-@media screen and (max-width: 1023px) {
-    .orderpage {
-        &__container {
-            padding: 32px 32px 0 117px;
-        }
-    }
-}
-@media screen and (max-width: 767px) {
-    .orderpage {
-        &__content {
-            position: relative;
-            overflow: hidden;
-        }
-        &__container {
-            padding: 0;
-            margin: 22px 0 0 0px;
-        }
     }
 }

@@ -5,32 +5,26 @@
         width: 325px;
         font-family: $light;
         color: $main-black;
+
+        @media screen and (max-width: 767px) {
+            margin: 0 16px;
+            width: 100%;
+        }
     }
     &_map {
         margin: 48px 64px 0 0;
+
+        @media screen and (max-width: 1023px) {
+            margin: 48px 32px 0 0;
+        }
+        @media screen and (max-width: 767px) {
+            margin: 48px 58px 0 16px;
+        }
         & h2 {
             margin-bottom: 16px;
         }
         img {
             max-width: 732px;
-            width: 100%;
-        }
-    }
-}
-@media screen and (max-width: 1023px) {
-    .orderpage__step-1 {
-        &_map {
-            margin: 48px 32px 0 0;
-        }
-    }
-}
-@media screen and (max-width: 767px) {
-    .orderpage__step-1 {
-        &_map {
-            margin: 48px 58px 0 16px;
-        }
-        &_searches {
-            margin: 0 16px;
             width: 100%;
         }
     }

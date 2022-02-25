@@ -11,6 +11,19 @@
         flex-direction: column;
         margin: 32px 64px 0 128px;
         transition: 0.5s;
+
+        @media screen and (min-width: 1930px) {
+            margin: 32px 80px 0 165px;
+        }
+        @media screen and (max-width: 1439px) {
+            margin: 32px 32px 0 96px;
+        }
+        @media screen and (max-width: 1023px) {
+            margin: 32px 32px 0 117px;
+        }
+        @media screen and (max-width: 767px) {
+            margin: 22px 0 0 0;
+        }
     }
     &__main {
         flex: 1 1 auto;
@@ -18,20 +31,62 @@
         flex-direction: column;
         justify-content: center;
         margin-top: -65px;
+
+        @media screen and (min-width: 1930px) {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: -65px;
+        }
+        @media screen and (max-width: 767px) {
+            margin-top: -150px;
+        }
         & h1,
         h2 {
             font-size: 70px;
             font-family: $bold;
+
+            @media screen and (min-width: 1930px) {
+                font-size: 91px;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 32px;
+                margin: 0 16px;
+            }
+        }
+        & h1 {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 8px;
+            }
         }
         & h2 {
             color: $main-accent;
             margin-bottom: 30px;
+
+            @media screen and (min-width: 1930px) {
+                color: $main-accent;
+                margin-bottom: 39px;
+            }
+            @media screen and (max-width: 767px) {
+                margin-bottom: 16px;
+            }
         }
         & h3 {
             font-size: 26px;
             color: $gray-dark;
             margin-bottom: 60px;
             font-family: $light;
+
+            @media screen and (min-width: 1930px) {
+                font-size: 33px;
+                margin-bottom: 78px;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 18px;
+                margin: 0 16px 32px 16px;
+                line-height: 21px;
+            }
         }
     }
     &__btn {
@@ -42,6 +97,18 @@
         height: 48px;
         width: 250px;
         border-radius: 8px;
+
+        @media screen and (min-width: 1930px) {
+            font-size: 23px;
+            height: 60px;
+            width: 320px;
+            border-radius: 10px;
+        }
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            border-radius: 0px;
+            height: 50px;
+        }
         &:hover {
             background: $button-hover;
         }
@@ -56,130 +123,43 @@
         font-size: 13px;
         transition: 0.3s;
         margin-bottom: 36px;
-        & :first-child {
-            color: $gray-dark;
-        }
-        & :last-child {
-            color: $main-black;
-            &:hover {
-                color: $main-accent;
-                cursor: pointer;
-            }
-        }
-    }
-}
-@media screen and (min-width: 1930px) {
-    .homepage {
-        &__container {
-            margin: 32px 80px 0 165px;
-        }
-        &__main {
-            flex: 1 1 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-top: -65px;
-            & h1,
-            h2 {
-                font-size: 91px;
-            }
-            & h2 {
-                color: $main-accent;
-                margin-bottom: 39px;
-            }
-            & h3 {
-                font-size: 33px;
-                margin-bottom: 78px;
-            }
-        }
-        &__btn {
-            color: white;
-            font-size: 23px;
-            height: 60px;
-            width: 320px;
-            border-radius: 10px;
-        }
-        &__footer {
-            font-size: 17px;
-            & :first-child {
-                color: $gray-dark;
-            }
-            & :last-child {
-                color: $main-black;
-                &:hover {
-                    color: $main-accent;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-}
-@media screen and (max-width: 1439px) {
-    .homepage {
-        &__container {
-            margin: 32px 32px 0 96px;
-        }
-    }
-}
-@media screen and (max-width: 1023px) {
-    .homepage {
-        &__container {
-            margin: 32px 32px 0 117px;
-        }
-    }
-}
-@media screen and (max-width: 767px) {
-    .homepage {
-        &__container {
-            margin: 22px 0 0 0;
-        }
-        &__main {
-            margin-top: -150px;
-            & h1,
-            h2 {
-                font-size: 32px;
-                margin: 0 16px;
-            }
-            & h1 {
-                margin-bottom: 8px;
-            }
-            & h2 {
-                margin-bottom: 16px;
-            }
-            & h3 {
-                font-size: 18px;
-                margin: 0 16px 32px 16px;
-                line-height: 21px;
-            }
-        }
-        &__btn {
-            width: 100%;
-            border-radius: 0px;
-            height: 50px;
 
-            &:hover {
-                background: $button-hover;
-            }
+        @media screen and (min-width: 1930px) {
+            font-size: 17px;
         }
-        &__footer {
+        @media screen and (max-width: 767px) {
             margin: 0;
             background-color: $main-black;
             flex-direction: column-reverse;
             align-items: end;
             padding: 18px;
+        }
+        & :first-child {
+            color: $gray-dark;
 
-            & :first-child {
+            @media screen and (max-width: 767px) {
                 color: $gray-light;
                 font-family: $regular;
                 margin-top: 9px;
             }
-            & :last-child {
+        }
+        & :last-child {
+            color: $main-black;
+
+            @media screen and (max-width: 767px) {
                 color: $main-accent;
                 font-family: $regular;
-                &:hover {
+            }
+            &:hover {
+                color: $main-accent;
+                cursor: pointer;
+
+                @media screen and (max-width: 767px) {
                     color: $gray-light;
                 }
-                &:active {
+            }
+            &:active {
+                @media screen and (max-width: 767px) {
                     color: white;
                 }
             }

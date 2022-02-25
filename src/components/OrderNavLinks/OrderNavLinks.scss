@@ -11,9 +11,17 @@
     }
     &__hr_top {
         top: 96px;
+
+        @media screen and (max-width: 767px) {
+            top: 116px;
+        }
     }
     &__hr_bot {
         top: 128px;
+
+        @media screen and (max-width: 767px) {
+            top: 148px;
+        }
     }
     &__navigation {
         margin: 44px 0 7px;
@@ -21,12 +29,38 @@
         align-items: center;
         font-size: 14px;
         font-family: $medium;
+
+        @media screen and (max-width: 767px) {
+            padding: 0 16px;
+        }
         &_item {
             display: flex;
+
+            @media screen and (max-width: 767px) {
+                flex: 1 1 auto;
+            }
+            @media screen and (max-width: 390px) {
+                flex: 0 0 auto;
+            }
         }
 
         &_arr {
             width: 37px;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+            @media screen and (max-width: 390px) {
+                width: 20px;
+            }
+        }
+        & :nth-child(5) {
+            & :first-child {
+                @media screen and (max-width: 390px) {
+                    width: 26px;
+                    overflow: hidden;
+                }
+            }
         }
         &_link {
             color: $gray-dark;
@@ -35,41 +69,4 @@
 }
 .active {
     color: $main-accent;
-}
-@media screen and (max-width: 767px) {
-    .orderpage {
-        &__navigation {
-            padding: 0 16px;
-            &_item {
-                flex: 1 1 auto;
-            }
-            &_arr {
-                width: 100%;
-            }
-        }
-        &__hr_top {
-            top: 116px;
-        }
-        &__hr_bot {
-            top: 148px;
-        }
-    }
-}
-@media screen and (max-width: 390px) {
-    .orderpage {
-        &__navigation {
-            &_item {
-                flex: 0 0 auto;
-            }
-            &_arr {
-                width: 20px;
-            }
-            & :nth-child(5) {
-                & :first-child {
-                    width: 26px;
-                    overflow: hidden;
-                }
-            }
-        }
-    }
 }
