@@ -1,8 +1,10 @@
+import { homePage } from '../../components/Routes/routerPath';
+
 export default function NotFountPage() {
     return (
         <div>
             Вы перешли на несуществующую страницу
-            <a href="/need_for_drive">Вернуться на главную</a>
+            <a href={homePage}>Вернуться на главную</a>
         </div>
     );
 }

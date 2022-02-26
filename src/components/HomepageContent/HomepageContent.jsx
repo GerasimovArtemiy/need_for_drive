@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import './HomepageContent.scss';
+import { orderStep1 } from '../Routes/routerPath';
 
 export default function HomepageContent() {
     return (
@@ -11,7 +12,7 @@ export default function HomepageContent() {
                     <h1> Каршеринг </h1>
                     <h2> Need for drive</h2>
                     <h3>Поминутная аренда авто твоего города</h3>
-                    <Link to="/need_for_drive/order/step_1">
+                    <Link to={orderStep1}>
                         <button type="button" className="homepage__btn">
                             Забронировать
                         </button>
