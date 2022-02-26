@@ -1,0 +1,44 @@
+@import '../../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__step-2_filter-item {
+    margin-right: 16px;
+    font-family: $regular;
+}
+.radiobutton {
+    -webkit-apperance: none;
+    appearance: none;
+    position: absolute;
+
+    &__label {
+        color: $gray-dark;
+        display: block;
+        position: relative;
+
+        @media screen and (max-width: 370px) {
+            padding-top: 15px;
+        }
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid $gray-dark;
+            border-radius: 50%;
+            margin-right: 8px;
+
+            @media screen and (max-width: 370px) {
+                display: block;
+                position: absolute;
+                top: 8px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &:checked + .radiobutton__label {
+        color: $main-black;
+    }
+    &:checked + .radiobutton__label:before {
+        border: 3px solid $main-accent;
+    }
+}
