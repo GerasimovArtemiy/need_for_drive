@@ -19,16 +19,10 @@ export default function Navbar() {
                 >
                     <div
                         className={`navbar__burger_white ${
-                            burgerActive
-                                ? 'navbar__burger_white'
-                                : 'navbar__burger_black'
+                            burgerActive ? '' : 'navbar__burger_black'
                         }`}
                     >
-                        <span
-                            className={
-                                burgerActive ? 'navbar__burger_active' : ''
-                            }
-                        />
+                        <span className={burgerActive ? 'navbar__burger_active' : ''} />
                     </div>
                 </div>
                 <LanguageButton burgerActive={burgerActive} />

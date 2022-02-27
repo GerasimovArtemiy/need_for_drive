@@ -1,0 +1,40 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.homepage {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin: 0 16px 36px 0;
+        }
+        &_logo {
+            font-family: $bold;
+            font-size: 30px;
+            & a {
+                color: $main-accent;
+            }
+
+            @media screen and (max-width: 767px) {
+                margin-bottom: 10px;
+                font-size: 30px;
+            }
+        }
+        &_city {
+            display: flex;
+            align-items: center;
+            font-family: $regular;
+            &-mark {
+                height: 20px;
+                margin-right: 4px;
+            }
+            & div {
+                color: $gray-dark;
+                font-size: 14px;
+            }
+        }
+    }
+}
