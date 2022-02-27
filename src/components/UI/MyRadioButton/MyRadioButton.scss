@@ -13,6 +13,7 @@
         color: $gray-dark;
         display: block;
         position: relative;
+        cursor: pointer;
 
         @media screen and (max-width: 370px) {
             padding-top: 15px;

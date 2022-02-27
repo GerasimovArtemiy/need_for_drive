@@ -7,7 +7,7 @@
     height: 100%;
     width: 100%;
     color: white;
-    z-index: 2;
+    z-index: 1;
     transform: translateX(-200%);
     transition: 0.5s;
     &_main {
@@ -50,7 +50,7 @@
 
         @media screen and (max-width: 767px) {
             font-size: 22px;
-            margin: 80px 0 0 28px;
+            margin: 80px 0 0 16px;
             width: 100%;
         }
         & ul {
