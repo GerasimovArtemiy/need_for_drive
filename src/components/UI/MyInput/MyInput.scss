@@ -8,18 +8,17 @@
     text-align: right;
 
     @media screen and (max-width: 767px) {
-        text-align: center;
+        text-align: left;
         margin-right: 83px;
     }
     & label {
         @media screen and (max-width: 767px) {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
     }
     & input {
         border-bottom: 1px solid $gray-dark;
-        margin-left: 8px;
         width: 224px;
         padding-left: 10px;
 

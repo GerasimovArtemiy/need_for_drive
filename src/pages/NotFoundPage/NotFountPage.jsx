@@ -1,10 +1,10 @@
-import { homePage } from '../../components/Routes/routerPath';
+import routerPath from '../../components/Routes/routerPath';
 
 export default function NotFountPage() {
     return (
         <div>
             Вы перешли на несуществующую страницу
-            <a href={homePage}>Вернуться на главную</a>
+            <a href={routerPath.homePage}>Вернуться на главную</a>
         </div>
     );
 }
