@@ -8,7 +8,7 @@ export default function Navbar() {
 
     return (
         <>
-            <BurgerMenu active={burgerActive} />
+            <BurgerMenu burgerActive={burgerActive} />
             <nav className="navbar">
                 <div
                     role="button"

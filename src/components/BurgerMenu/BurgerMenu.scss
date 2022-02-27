@@ -1,7 +1,7 @@
 @import '../../assets/BasicColorsAndFonts.scss';
 
 .burger__menu {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -13,7 +13,7 @@
     &_main {
         flex: 1 1 auto;
         height: 100%;
-        background-color: rgba(17, 21, 24, 1);
+        background-color: $main-black;
         display: flex;
         align-items: center;
 
