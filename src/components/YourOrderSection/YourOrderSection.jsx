@@ -24,6 +24,11 @@ export default function YourOrderSection() {
                     Выбрать модель
                 </button>
             </section>
+            <div className="orderpage__your-order_vr">
+                <div>
+                    <div />
+                </div>
+            </div>
         </div>
     );
 }

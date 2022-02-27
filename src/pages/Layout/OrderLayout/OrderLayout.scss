@@ -29,5 +29,8 @@
         margin-top: 32px;
         max-width: 928px;
         flex: 1 1 auto;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 1px;
+        }
     }
 }
