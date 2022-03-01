@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import YourOrderArrow from './YourOrderArrow/YourOrderArrow';
-import YourOrderPickModel from './YourOrderPickModel/YourOrderPickModel';
+import YourOrderSelectItem from './YourOrderSelect/YourOrderSelectItem';
 import YourOrderPickPoint from './YourOrderPickPoint/YourOrderPickPoint';
 import './YourOrderSection.scss';
 
@@ -16,7 +16,11 @@ export default function YourOrderSection() {
                 <YourOrderArrow active={yourOrderActive} setActive={setYourOrderActive} />
                 <h2>Ваш заказ:</h2>
                 <YourOrderPickPoint />
-                <YourOrderPickModel />
+                <YourOrderSelectItem title="Модель" subtitle="Hyndai, i 30 N" />
+                <YourOrderSelectItem title="Цвет" subtitle="Голубой" />
+                <YourOrderSelectItem title="Длительность аренды" subtitle="1д 2ч" />
+                <YourOrderSelectItem title="Тариф" subtitle="На сутки" />
+                <YourOrderSelectItem title="Полный бак" subtitle="Да" />
                 <div className="orderpage__your-order_price">
                     <span>Цена:</span> от 8 000 до 12 000 ₽
                 </div>

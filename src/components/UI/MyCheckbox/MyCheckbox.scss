@@ -1,14 +1,13 @@
 @import '../../../assets/BasicColorsAndFonts.scss';
 
-.orderpage__step_radiobutton {
+.orderpage__step_checkbox {
     margin-right: 16px;
     font-family: $regular;
 }
-.radiobutton {
+.checkbox {
     -webkit-apperance: none;
     appearance: none;
     position: absolute;
-
     &__label {
         color: $gray-dark;
         display: block;
@@ -24,7 +23,6 @@
             width: 12px;
             height: 12px;
             border: 1px solid $gray-dark;
-            border-radius: 50%;
             margin-right: 8px;
 
             @media screen and (max-width: 370px) {
@@ -35,11 +33,24 @@
                 transform: translate(-50%, -50%);
             }
         }
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background: url(../../../assets/icons/checkbox-icon.svg) no-repeat;
+            left: 2px;
+            position: absolute;
+            opacity: 0;
+        }
     }
-    &:checked + .radiobutton__label {
+    &:checked + .checkbox__label {
         color: $main-black;
     }
-    &:checked + .radiobutton__label:before {
-        border: 3px solid $main-accent;
+    &:checked + .checkbox__label:before {
+        border: 1px solid $main-accent;
+    }
+    &:checked + .checkbox__label:after {
+        opacity: 1;
     }
 }

@@ -3,7 +3,7 @@ import './MyRadioButton.scss';
 
 export default function MyRadioButton({ id, labelText, name }) {
     return (
-        <div className="orderpage__step-2_filter-item">
+        <div className="orderpage__step_radiobutton">
             <input id={`radio${id}`} name={name} type="radio" className="radiobutton" />
             <label htmlFor={`radio${id}`} className="radiobutton__label">
                 {labelText}
@@ -17,7 +17,7 @@ MyRadioButton.propTypes = {
     id: PropTypes.string,
 };
 MyRadioButton.defaultProps = {
-    labelText: 'Класс авто',
+    labelText: 'Заголовок',
     name: 'name',
     id: '',
 };

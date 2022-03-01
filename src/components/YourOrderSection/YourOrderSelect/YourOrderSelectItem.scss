@@ -1,13 +1,13 @@
 @import '../../../assets/BasicColorsAndFonts.scss';
 
-.orderpage__your-order_model {
-    margin-bottom: 32px;
+.orderpage__your-order_item {
+    margin-bottom: 16px;
     font-family: $regular;
     font-size: 14px;
     display: flex;
     justify-content: space-between;
     & :nth-child(1) {
-        max-width: 91px;
+        max-width: 150px;
     }
     & :nth-child(2) {
         flex: 1 1 auto;

@@ -1,0 +1,57 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__step-3 {
+    font-family: $light;
+    &_container {
+        margin-right: 64px;
+
+        @media screen and (max-width: 1080px) {
+            margin-right: 32px;
+        }
+        @media screen and (max-width: 767px) {
+            margin: 0 58px 0 32px;
+        }
+        @media screen and (max-width: 400px) {
+            margin: 0 58px 0 16px;
+        }
+    }
+    &_form {
+        &-colors {
+            display: flex;
+            margin-bottom: 32px;
+        }
+        &-title-colors {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        &-title-date {
+            margin-bottom: 16px;
+        }
+        &-date {
+            width: 250px;
+            margin-bottom: 32px;
+            & label {
+                margin-right: 8px;
+            }
+        }
+        &-rates {
+            height: 72px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            & h1 {
+                margin-bottom: 16px;
+            }
+        }
+        &-services {
+            height: 96px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & h1 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

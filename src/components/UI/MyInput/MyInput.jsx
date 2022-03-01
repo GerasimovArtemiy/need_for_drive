@@ -3,7 +3,7 @@ import './MyInput.scss';
 
 export default function MyInput({ label, placeholder, type }) {
     return (
-        <div className="orderpage__step-1_search">
+        <div className="orderpage__step_search">
             <label htmlFor="search">{label}</label>
             <input id="search" placeholder={placeholder} type={type} />
         </div>
