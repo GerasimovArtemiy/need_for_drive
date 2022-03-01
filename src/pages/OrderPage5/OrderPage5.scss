@@ -1,0 +1,28 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__step-5 {
+    &_order-number {
+        position: absolute;
+        top: 106px;
+        background: white;
+        width: 70%;
+        height: 20px;
+        font-family: $bold;
+        font-size: 14px;
+
+        @media screen and (max-width: 767px) {
+            top: 126px;
+            margin-left: 16px;
+            width: 95%;
+        }
+    }
+    &_title {
+        font-size: 24px;
+        margin-bottom: 16px;
+        font-family: $regular;
+
+        @media screen and (max-width: 767px) {
+            margin-left: 16px;
+        }
+    }
+}

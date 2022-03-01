@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import carTest from '../../assets/img/car-img.jpg';
 import ConfirmOrder from '../../components/ConfirmOrder/ConfirmOrder';
+import routerPath from '../../components/Routes/routerPath';
 import './OrderPage4.scss';
 
 export default function OrderPage4() {
@@ -18,20 +20,36 @@ export default function OrderPage4() {
                         <span>100%</span>
                     </div>
                     <div className="orderpage__step-4_access-date">
-                        <span>Доступность с</span> <span>12.06.2019 12:00</span>
+                        <span>Доступна с</span> <span>12.06.2019 12:00</span>
                     </div>
-                    <button
-                        onClick={() => setVisibleModal(!visibleModal)}
-                        style={{
-                            height: '30px',
-                            width: '170px',
-                            background: '#e9e9e9',
-                            borderRadius: '10px',
-                        }}
-                        type="button"
-                    >
-                        МОДАЛЬНОЕ ОКНО
-                    </button>
+                    <div className="temporary_block">
+                        <button
+                            onClick={() => setVisibleModal(!visibleModal)}
+                            style={{
+                                height: '30px',
+                                width: '100px',
+                                background: '#e9e9e9',
+                                borderRadius: '10px',
+                                marginBottom: '16px',
+                            }}
+                            type="button"
+                        >
+                            стр. МОДАЛКА
+                        </button>
+                        <Link to={routerPath.orderStep5}>
+                            <button
+                                style={{
+                                    height: '30px',
+                                    width: '100px',
+                                    background: '#e9e9e9',
+                                    borderRadius: '10px',
+                                }}
+                                type="button"
+                            >
+                                стр. ГОТОВ
+                            </button>
+                        </Link>
+                    </div>
                 </div>
                 <div className="orderpage__step-4_img-car">
                     <img src={carTest} alt="img-car" />
