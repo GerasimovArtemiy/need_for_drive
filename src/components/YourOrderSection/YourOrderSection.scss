@@ -9,22 +9,21 @@
             width: 100%;
             border-top: 1px solid #eee;
         }
-        &_vr {
+        &_vertical-line {
             position: relative;
-            & > div {
+            &-empty-1 {
                 position: absolute;
                 top: -403px;
                 left: 0;
-                & > div {
-                    position: fixed;
-                    transform: translateX(-100%);
-                    background: #eeeeee;
-                    height: 200vh;
-                    width: 1px;
-                }
+            }
+            &-empty-2 {
+                position: fixed;
+                transform: translateX(-100%);
+                background: #eeeeee;
+                height: 200vh;
+                width: 1px;
             }
         }
-
         &_active {
             @media screen and (max-width: 767px) {
                 transform: translateX(0);
