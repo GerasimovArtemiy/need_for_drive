@@ -1,12 +1,12 @@
 .orderpage__step-2 {
     &_container {
-        margin-right: 64px;
+        margin: 0 64px 16px 0;
 
         @media screen and (max-width: 1080px) {
-            margin-right: 32px;
+            margin: 0 32px 16px 0;
         }
         @media screen and (max-width: 767px) {
-            margin: 0 58px 0 16px;
+            margin: 0 16px 0px 16px;
         }
     }
     &_filter-models {

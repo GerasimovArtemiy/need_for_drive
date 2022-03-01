@@ -9,10 +9,7 @@
             margin-right: 32px;
         }
         @media screen and (max-width: 767px) {
-            margin: 0 58px 0 32px;
-        }
-        @media screen and (max-width: 400px) {
-            margin: 0 58px 0 16px;
+            margin: 0 16px 0 16px;
         }
     }
     &_form {
@@ -30,8 +27,9 @@
         &-date {
             width: 250px;
             margin-bottom: 32px;
-            & label {
-                margin-right: 8px;
+
+            @media screen and (max-width: 767px) {
+                width: auto;
             }
         }
         &-rates {

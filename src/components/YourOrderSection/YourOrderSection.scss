@@ -6,13 +6,8 @@
         width: 320px;
 
         @media screen and (max-width: 767px) {
-            position: absolute;
-            right: 0;
-            top: 1px;
-            background: white;
-            height: 100%;
-            transform: translateX(87%);
-            transition: 0.4s;
+            width: 100%;
+            border-top: 1px solid #eee;
         }
         &_vr {
             position: relative;
@@ -53,6 +48,10 @@
             margin-bottom: 26px;
             font-family: $medium;
             font-size: 18px;
+
+            @media screen and (max-width: 767px) {
+                align-self: auto;
+            }
         }
         &_price {
             font-size: 16px;
@@ -72,6 +71,7 @@
             @media screen and (max-width: 1439px) {
                 font-size: 16px;
                 height: 42px;
+                margin-bottom: 16px;
             }
         }
     }

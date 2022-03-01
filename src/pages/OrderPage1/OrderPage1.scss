@@ -8,23 +8,22 @@
 
         @media screen and (max-width: 767px) {
             margin: 0 16px;
-            width: 100%;
+            width: auto;
         }
     }
     &_map {
-        margin: 48px 64px 0 0;
+        margin: 45px 64px 0 0;
 
         @media screen and (max-width: 1023px) {
-            margin: 48px 32px 0 0;
+            margin: 45px 32px 0 0;
         }
         @media screen and (max-width: 767px) {
-            margin: 48px 58px 0 16px;
+            margin: 45px 16px 0 16px;
         }
         & h2 {
             margin-bottom: 16px;
         }
         img {
-            max-width: 732px;
             width: 100%;
         }
     }

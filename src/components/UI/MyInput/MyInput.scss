@@ -9,9 +9,10 @@
 
     @media screen and (max-width: 767px) {
         text-align: left;
-        margin-right: 83px;
     }
     & label {
+        margin-right: 8px;
+
         @media screen and (max-width: 767px) {
             display: block;
             margin-bottom: 10px;

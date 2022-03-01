@@ -13,10 +13,6 @@
         display: block;
         position: relative;
         cursor: pointer;
-
-        @media screen and (max-width: 370px) {
-            padding-top: 15px;
-        }
         &::before {
             content: '';
             display: inline-block;
@@ -24,14 +20,6 @@
             height: 12px;
             border: 1px solid $gray-dark;
             margin-right: 8px;
-
-            @media screen and (max-width: 370px) {
-                display: block;
-                position: absolute;
-                top: 8px;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
         }
         &::after {
             content: '';

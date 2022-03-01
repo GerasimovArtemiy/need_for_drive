@@ -9,15 +9,15 @@
     appearance: none;
     position: absolute;
 
+    @media screen and (max-width: 370px) {
+        margin-right: 7px;
+    }
+
     &__label {
         color: $gray-dark;
         display: block;
         position: relative;
         cursor: pointer;
-
-        @media screen and (max-width: 370px) {
-            padding-top: 15px;
-        }
         &::before {
             content: '';
             display: inline-block;
@@ -28,11 +28,7 @@
             margin-right: 8px;
 
             @media screen and (max-width: 370px) {
-                display: block;
-                position: absolute;
-                top: 8px;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                margin-right: 4px;
             }
         }
     }

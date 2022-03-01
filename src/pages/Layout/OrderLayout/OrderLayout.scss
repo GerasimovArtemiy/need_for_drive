@@ -18,11 +18,9 @@
     &__content {
         display: flex;
         justify-content: space-between;
-        height: 100%;
 
         @media screen and (max-width: 767px) {
-            position: relative;
-            overflow: hidden;
+            flex-direction: column;
         }
     }
     &__main {
@@ -30,7 +28,7 @@
         max-width: 928px;
         flex: 1 1 auto;
         @media screen and (max-width: 767px) {
-            margin-bottom: 1px;
+            margin-bottom: 16px;
         }
     }
 }
