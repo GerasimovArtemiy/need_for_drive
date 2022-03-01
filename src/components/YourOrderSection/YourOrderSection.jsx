@@ -24,9 +24,9 @@ export default function YourOrderSection() {
                     Выбрать модель
                 </button>
             </section>
-            <div className="orderpage__your-order_vr">
-                <div>
-                    <div />
+            <div className="orderpage__your-order_vertical-line">
+                <div className="orderpage__your-order_vertical-line-empty-1">
+                    <div className="orderpage__your-order_vertical-line-empty-2" />
                 </div>
             </div>
         </div>

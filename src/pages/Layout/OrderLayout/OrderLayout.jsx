@@ -8,7 +8,6 @@ import './OrderLayout.scss';
 export default function OrderLayout() {
     return (
         <div className="orderpage">
-            <div className="sas" />
             <Navbar />
             <div className="orderpage__container">
                 <Header />
