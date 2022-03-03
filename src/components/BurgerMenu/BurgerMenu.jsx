@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import menuLinks from './constants';
 import MessengerIcons from './MessengerIcons';
 
-export default function BurgerMenu({ active }) {
+export default function BurgerMenu({ burgerActive }) {
     return (
-        <div className={`burger__menu ${active ? 'burger__menu_active' : ''}`}>
+        <div className={`burger__menu ${burgerActive ? 'burger__menu_active' : ''}`}>
             <div className="burger__menu_main">
                 <div className="burger__menu_content">
                     <ul>
@@ -23,8 +23,8 @@ export default function BurgerMenu({ active }) {
     );
 }
 BurgerMenu.propTypes = {
-    active: PropTypes.bool,
+    burgerActive: PropTypes.bool,
 };
 BurgerMenu.defaultProps = {
-    active: false,
+    burgerActive: false,
 };

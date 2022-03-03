@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import YourOrderArrow from './YourOrderArrow/YourOrderArrow';
+import YourOrderPickModel from './YourOrderPickModel/YourOrderPickModel';
+import YourOrderPickPoint from './YourOrderPickPoint/YourOrderPickPoint';
 import './YourOrderSection.scss';
 
 export default function YourOrderSection() {
@@ -13,11 +15,8 @@ export default function YourOrderSection() {
             <section className="orderpage__your-order_section">
                 <YourOrderArrow active={yourOrderActive} setActive={setYourOrderActive} />
                 <h2>Ваш заказ:</h2>
-                <div className="orderpage__your-order_point">
-                    <div>Пункт выдачи</div>
-                    <div />
-                    <div>Ульяновск, Нариманова 42</div>
-                </div>
+                <YourOrderPickPoint />
+                <YourOrderPickModel />
                 <div className="orderpage__your-order_price">
                     <span>Цена:</span> от 8 000 до 12 000 ₽
                 </div>
@@ -25,6 +24,11 @@ export default function YourOrderSection() {
                     Выбрать модель
                 </button>
             </section>
+            <div className="orderpage__your-order_vertical-line">
+                <div className="orderpage__your-order_vertical-line-empty-1">
+                    <div className="orderpage__your-order_vertical-line-empty-2" />
+                </div>
+            </div>
         </div>
     );
 }
