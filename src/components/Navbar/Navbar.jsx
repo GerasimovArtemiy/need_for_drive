@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <>
             <BurgerMenu burgerActive={burgerActive} />
-            <nav style={{ position: burgerActive ? 'fixed' : '' }} className="navbar">
+            <nav className={`navbar ${burgerActive ? 'navbar__active' : ''}`}>
                 <div
                     role="button"
                     tabIndex={0}

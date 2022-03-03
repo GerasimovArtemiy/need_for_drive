@@ -18,6 +18,9 @@
         width: 0px;
         position: absolute;
     }
+    &__active {
+        position: fixed;
+    }
     &__burger_white {
         position: relative;
         display: block;
