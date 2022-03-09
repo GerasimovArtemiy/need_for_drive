@@ -1,5 +1,4 @@
 import YourOrderSelectItem from './YourOrderSelect/YourOrderSelectItem';
-import YourOrderPickPoint from './YourOrderPickPoint/YourOrderPickPoint';
 import './YourOrderSection.scss';
 
 export default function YourOrderSection() {
@@ -7,10 +6,16 @@ export default function YourOrderSection() {
         <div className="orderpage__your-order">
             <section className="orderpage__your-order_section">
                 <h2>Ваш заказ:</h2>
-                <YourOrderPickPoint />
+                <YourOrderSelectItem
+                    title="Пункт выдачи"
+                    subtitle="Ульяновск, Нариманова 42"
+                />
                 <YourOrderSelectItem title="Модель" subtitle="Hyndai, i 30 N" />
                 <YourOrderSelectItem title="Цвет" subtitle="Голубой" />
-                <YourOrderSelectItem title="Длительность аренды" subtitle="1д 2ч" />
+                <YourOrderSelectItem
+                    title="Длительность аренды"
+                    subtitle="1д 2ч"
+                />
                 <YourOrderSelectItem title="Тариф" subtitle="На сутки" />
                 <YourOrderSelectItem title="Полный бак" subtitle="Да" />
                 <div className="orderpage__your-order_price">
