@@ -17,8 +17,8 @@ export default function OrderPage3() {
 
                     <h1 className="orderpage__step-3_form-title-date">Дата аренды</h1>
                     <div className="orderpage__step-3_form-date">
-                        <MyInput label="C" placeholder="Введите дату и время" type="text" />
-                        <MyInput label="По" placeholder="Введите дату и время" type="text" />
+                        <MyInput label="C" placeholder="Введите дату и время" typeDate />
+                        <MyInput label="По" placeholder="Введите дату и время" typeDate />
                     </div>
 
                     <div className="orderpage__step-3_form-rates">
