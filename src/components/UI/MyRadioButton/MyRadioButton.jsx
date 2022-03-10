@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
 import './MyRadioButton.scss';
 
-export default function MyRadioButton({ id, labelText, name, value }) {
+export default function MyRadioButton({ id, labelText, checked, value, onChange }) {
     return (
         <div className="orderpage__step_radiobutton">
             <input
-                id={`radio${id}`}
-                name={name}
-                type="radio"
                 className="radiobutton"
+                id={`radio${id}`}
+                type="radio"
                 value={value}
+                checked={checked}
+                onChange={() => onChange(value)}
             />
             <label htmlFor={`radio${id}`} className="radiobutton__label">
                 {labelText}
@@ -20,12 +21,14 @@ export default function MyRadioButton({ id, labelText, name, value }) {
 MyRadioButton.propTypes = {
     labelText: PropTypes.string,
     value: PropTypes.string,
-    name: PropTypes.string,
-    id: PropTypes.string,
+    checked: PropTypes.bool,
+    id: PropTypes.number,
+    onChange: PropTypes.func,
 };
 MyRadioButton.defaultProps = {
     labelText: 'Заголовок',
     value: '',
-    name: 'name',
-    id: '',
+    checked: '',
+    id: 0,
+    onChange: () => {},
 };

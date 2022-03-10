@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     city: '',
     point: '',
-    carClass: 'Все модели',
-    cars: '',
+    carClass: '',
+    car: '',
     color: 'Любой',
     dateFrom: '',
     dateTo: '',
@@ -41,11 +41,11 @@ export const AllFormSlice = createSlice({
         setPoint(state, action) {
             state.point = action.payload;
         },
-        setСarClass(state, action) {
+        setCarClass(state, action) {
             state.carClass = action.payload;
         },
-        setCars(state, action) {
-            state.cars = action.payload;
+        setCar(state, action) {
+            state.car = action.payload;
         },
         setColor(state, action) {
             state.color = action.payload;
@@ -73,8 +73,8 @@ export const AllFormSlice = createSlice({
 export const {
     setCity,
     setPoint,
-    setСarClass,
-    setCars,
+    setCarClass,
+    setCar,
     setColor,
     setDateFrom,
     setDateTo,

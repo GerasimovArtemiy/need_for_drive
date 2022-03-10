@@ -21,7 +21,6 @@ export default function OrderPage1() {
     const pointChangeState = (value) => {
         dispatch(setPoint(value));
     };
-    console.log('citty:', city, 'point:', point);
 
     return (
         <div className="orderpage__step-1">
