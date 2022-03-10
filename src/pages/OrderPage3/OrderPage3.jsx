@@ -8,23 +8,60 @@ export default function OrderPage3() {
         <div className="orderpage__step-3">
             <div className="orderpage__step-3_container">
                 <form className="orderpage__step-3_form">
-                    <h1 className="orderpage__step-3_form-title-colors">Цвет</h1>
+                    <h1 className="orderpage__step-3_form-title-colors">
+                        Цвет
+                    </h1>
                     <div className="orderpage__step-3_form-colors">
-                        <MyRadioButton labelText="Любой" name="colors" id="1" />
-                        <MyRadioButton labelText="Красный" name="colors" id="2" />
-                        <MyRadioButton labelText="Голубой" name="colors" id="3" />
+                        <MyRadioButton
+                            labelText="Любой"
+                            name="colors"
+                            id="1"
+                            value="Любой"
+                        />
+                        <MyRadioButton
+                            labelText="Красный"
+                            name="colors"
+                            id="2"
+                            value="Красный"
+                        />
+                        <MyRadioButton
+                            labelText="Голубой"
+                            name="colors"
+                            id="3"
+                            value="Голубой"
+                        />
                     </div>
 
-                    <h1 className="orderpage__step-3_form-title-date">Дата аренды</h1>
+                    <h1 className="orderpage__step-3_form-title-date">
+                        Дата аренды
+                    </h1>
                     <div className="orderpage__step-3_form-date">
-                        <MyInput label="C" placeholder="Введите дату и время" type="text" />
-                        <MyInput label="По" placeholder="Введите дату и время" type="text" />
+                        <MyInput
+                            label="C"
+                            placeholder="Введите дату и время"
+                            typeDate
+                        />
+                        <MyInput
+                            label="По"
+                            placeholder="Введите дату и время"
+                            typeDate
+                        />
                     </div>
 
                     <div className="orderpage__step-3_form-rates">
                         <h1>Тариф</h1>
-                        <MyRadioButton labelText="Поминутно, 7 ₽/мин" name="rates" id="4" />
-                        <MyRadioButton labelText="На сутки, 1999 ₽/сутки" name="rates" id="5" />
+                        <MyRadioButton
+                            labelText="Поминутно, 7 ₽/мин"
+                            name="rates"
+                            id="4"
+                            value="Поминутно, 7 ₽/мин"
+                        />
+                        <MyRadioButton
+                            labelText="На сутки, 1999 ₽/сутки"
+                            name="rates"
+                            id="5"
+                            value="На сутки, 1999 ₽/сутки"
+                        />
                     </div>
 
                     <div className="orderpage__step-3_form-services">

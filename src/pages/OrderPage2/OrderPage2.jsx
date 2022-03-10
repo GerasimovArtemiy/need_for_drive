@@ -1,5 +1,6 @@
 import ListCars from '../../components/ListCars/ListCars';
-import MyRadioButton from '../../components/UI/MyRadioButton/MyRadioButton';
+import RadioButtonGroup from '../../components/UI/RadioButtonGroup/RadioButtonGroup';
+import carClassButton from './constants';
 import './OrderPage2.scss';
 
 export default function OrderPage2() {
@@ -7,9 +8,7 @@ export default function OrderPage2() {
         <div className="orderpage__step-2">
             <div className="orderpage__step-2_container">
                 <form className="orderpage__step-2_filter-models">
-                    <MyRadioButton labelText="Все модели" name="class-auto" id="1" />
-                    <MyRadioButton labelText="Эконом" name="class-auto" id="2" />
-                    <MyRadioButton labelText="Премиум" name="class-auto" id="3" />
+                    <RadioButtonGroup radioButtons={carClassButton} />
                 </form>
                 <ListCars />
             </div>
