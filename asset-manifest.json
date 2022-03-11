@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/need_for_drive/static/css/main.d887e59d.css",
-    "main.js": "/need_for_drive/static/js/main.2306edf9.js",
+    "main.css": "/need_for_drive/static/css/main.f631c98a.css",
+    "main.js": "/need_for_drive/static/js/main.bd90bf1d.js",
     "static/js/787.859d4105.chunk.js": "/need_for_drive/static/js/787.859d4105.chunk.js",
     "static/media/Roboto-Bold.svg": "/need_for_drive/static/media/Roboto-Bold.43841e35c236fddb18f1.svg",
     "static/media/Roboto-Light.svg": "/need_for_drive/static/media/Roboto-Light.094e956d58ab400956e2.svg",
@@ -38,12 +38,12 @@
     "static/media/slider-arrow_left.svg": "/need_for_drive/static/media/slider-arrow_left.1752ae9160db5265a941.svg",
     "static/media/slider-arrow_right.svg": "/need_for_drive/static/media/slider-arrow_right.7591c327fb5160f95b31.svg",
     "static/media/order-arrow_nav.svg": "/need_for_drive/static/media/order-arrow_nav.ba4fa0999feaf41ba05e32f2fd2098f4.svg",
-    "main.d887e59d.css.map": "/need_for_drive/static/css/main.d887e59d.css.map",
-    "main.2306edf9.js.map": "/need_for_drive/static/js/main.2306edf9.js.map",
+    "main.f631c98a.css.map": "/need_for_drive/static/css/main.f631c98a.css.map",
+    "main.bd90bf1d.js.map": "/need_for_drive/static/js/main.bd90bf1d.js.map",
     "787.859d4105.chunk.js.map": "/need_for_drive/static/js/787.859d4105.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d887e59d.css",
-    "static/js/main.2306edf9.js"
+    "static/css/main.f631c98a.css",
+    "static/js/main.bd90bf1d.js"
   ]
 }
