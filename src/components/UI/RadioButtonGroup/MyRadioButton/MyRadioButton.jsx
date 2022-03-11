@@ -28,7 +28,7 @@ MyRadioButton.propTypes = {
 MyRadioButton.defaultProps = {
     labelText: 'Заголовок',
     value: '',
-    checked: '',
+    checked: false,
     id: 0,
     onChange: () => {},
 };

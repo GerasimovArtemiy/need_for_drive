@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import CrossBtn from './CrossBtn/CrossBtn';
 import './MyInput.scss';
 
 export default function MyInput({ label, placeholder, typeDate, value, onChange, name }) {
@@ -21,6 +22,7 @@ export default function MyInput({ label, placeholder, typeDate, value, onChange,
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
             />
+            {value !== '' && <CrossBtn type={typeInput} onChange={onChange} />}
         </div>
     );
 }

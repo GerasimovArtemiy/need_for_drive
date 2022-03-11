@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import MyRadioButton from '../MyRadioButton/MyRadioButton';
+import MyRadioButton from './MyRadioButton/MyRadioButton';
 
-export default function RadioButtonGroup({ radioButtons, selectedClassCar, onChange }) {
+export default function RadioButtonGroup({ radioButtons, selectedButton, onChange }) {
     return (
         <>
             {radioButtons.map(({ id, label }) => (
@@ -10,7 +10,7 @@ export default function RadioButtonGroup({ radioButtons, selectedClassCar, onCha
                     id={id}
                     value={label}
                     labelText={label}
-                    checked={selectedClassCar === label}
+                    checked={selectedButton === label}
                     onChange={onChange}
                 />
             ))}
@@ -19,11 +19,11 @@ export default function RadioButtonGroup({ radioButtons, selectedClassCar, onCha
 }
 RadioButtonGroup.propTypes = {
     radioButtons: PropTypes.instanceOf(Array),
-    selectedClassCar: PropTypes.string,
+    selectedButton: PropTypes.string,
     onChange: PropTypes.func,
 };
 RadioButtonGroup.defaultProps = {
     radioButtons: [],
-    selectedClassCar: 'Все модели',
+    selectedButton: 'Все модели',
     onChange: () => {},
 };

@@ -30,7 +30,7 @@ export default function OrderPage2() {
                 <form className="orderpage__step-2_filter-models">
                     <RadioButtonGroup
                         radioButtons={carClassButton}
-                        selectedClassCar={carClass}
+                        selectedButton={carClass}
                         onChange={carClassChangeState}
                     />
                 </form>

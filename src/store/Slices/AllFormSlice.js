@@ -5,10 +5,10 @@ const initialState = {
     point: '',
     carClass: '',
     car: '',
-    color: 'Любой',
+    color: '',
     dateFrom: '',
     dateTo: '',
-    tariff: 'На сутки, 1999Р/сутки',
+    tariff: 'На сутки, 1999 ₽/сутки',
     extraServices: [
         {
             id: 0,

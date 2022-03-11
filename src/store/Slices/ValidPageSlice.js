@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    locationStep: false,
+    locationStep: true,
     carStep: false,
     moreStep: false,
     totalStep: false,
@@ -29,12 +29,7 @@ const ValidPageSlice = createSlice({
     },
 });
 
-export const {
-    setLocationStep,
-    setCarStep,
-    setMoreStep,
-    setTotalStep,
-    resetValid,
-} = ValidPageSlice.actions;
+export const { setLocationStep, setCarStep, setMoreStep, setTotalStep, resetValid } =
+    ValidPageSlice.actions;
 
 export default ValidPageSlice.reducer;
