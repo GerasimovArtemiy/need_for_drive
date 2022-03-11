@@ -8,8 +8,8 @@ export default function Navbar() {
 
     return (
         <>
-            <BurgerMenu active={burgerActive} />
-            <nav className="navbar">
+            <BurgerMenu burgerActive={burgerActive} />
+            <nav className={`navbar ${burgerActive ? 'navbar__active' : ''}`}>
                 <div
                     role="button"
                     tabIndex={0}

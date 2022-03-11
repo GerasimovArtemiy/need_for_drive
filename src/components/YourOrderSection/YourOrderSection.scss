@@ -6,13 +6,23 @@
         width: 320px;
 
         @media screen and (max-width: 767px) {
-            position: absolute;
-            right: 0;
-            top: 1px;
-            background: white;
-            height: 100%;
-            transform: translateX(87%);
-            transition: 0.4s;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+        &_vertical-line {
+            position: relative;
+            &-empty-1 {
+                position: absolute;
+                top: -403px;
+                left: 0;
+            }
+            &-empty-2 {
+                position: fixed;
+                transform: translateX(-100%);
+                background: #eeeeee;
+                height: 200vh;
+                width: 1px;
+            }
         }
         &_active {
             @media screen and (max-width: 767px) {
@@ -37,37 +47,14 @@
             margin-bottom: 26px;
             font-family: $medium;
             font-size: 18px;
-        }
-        &_point {
-            margin-bottom: 32px;
-            font-family: $regular;
-            font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            & :nth-child(1) {
-                align-self: flex-end;
-                width: 91px;
-            }
-            & :nth-child(2) {
-                flex: 1 1 auto;
-                border-bottom: 1px dotted $gray-dark;
-                margin: 0 12px;
-                min-width: 8px;
 
-                @media screen and (max-width: 1439px) {
-                    margin: 0 5px;
-                }
-            }
-            & :nth-child(3) {
-                text-align: right;
-                line-height: 16px;
-                color: $gray-dark;
-                width: 102px;
+            @media screen and (max-width: 767px) {
+                align-self: auto;
             }
         }
         &_price {
             font-size: 16px;
-            margin-bottom: 32px;
+            margin: 32px 0;
             & span {
                 font-family: $bold;
             }
@@ -80,9 +67,10 @@
             font-size: 18px;
             font-family: $medium;
 
-            @media screen and (max-width: 1023px) {
+            @media screen and (max-width: 1439px) {
                 font-size: 16px;
                 height: 42px;
+                margin-bottom: 16px;
             }
         }
     }

@@ -1,0 +1,32 @@
+@import '../../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__your-order_point {
+    margin-bottom: 16px;
+    font-family: $regular;
+    font-size: 14px;
+    &-city {
+        text-align: end;
+        color: $gray-dark;
+    }
+    &-street {
+        display: flex;
+        & :nth-child(1) {
+            width: 91px;
+        }
+        & :nth-child(2) {
+            flex: 1 1 auto;
+            border-bottom: 1px dotted $gray-dark;
+            margin: 0 12px;
+            min-width: 8px;
+
+            @media screen and (max-width: 1439px) {
+                margin: 0 5px;
+            }
+        }
+        & :nth-child(3) {
+            line-height: 16px;
+            color: $gray-dark;
+            width: 102px;
+        }
+    }
+}

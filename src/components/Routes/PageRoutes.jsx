@@ -8,29 +8,21 @@ import OrderPage4 from '../../pages/OrderPage4/OrderPage4';
 import OrderPage5 from '../../pages/OrderPage5/OrderPage5';
 import NotFoundPage from '../../pages/NotFoundPage/NotFountPage';
 import OrderLayout from '../../pages/Layout/OrderLayout/OrderLayout';
-import {
-    homePage,
-    orderPage,
-    orderStep1,
-    orderStep2,
-    orderStep3,
-    orderStep4,
-    orderStep5,
-} from './routerPath';
+import routerPath from './routerPath';
 
 export default function PageRoutes() {
     return (
         <Routes basename="/need_for_drive">
-            <Route path={homePage} element={<HomepageLayout />}>
+            <Route path={routerPath.homePage} element={<HomepageLayout />}>
                 <Route index element={<Homepage />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Route>
-            <Route path={orderPage} element={<OrderLayout />}>
-                <Route path={orderStep1} element={<OrderPage1 />} />
-                <Route path={orderStep2} element={<OrderPage2 />} />
-                <Route path={orderStep3} element={<OrderPage3 />} />
-                <Route path={orderStep4} element={<OrderPage4 />} />
-                <Route path={orderStep5} element={<OrderPage5 />} />
+            <Route path={routerPath.orderPage} element={<OrderLayout />}>
+                <Route path={routerPath.orderStep1} element={<OrderPage1 />} />
+                <Route path={routerPath.orderStep2} element={<OrderPage2 />} />
+                <Route path={routerPath.orderStep3} element={<OrderPage3 />} />
+                <Route path={routerPath.orderStep4} element={<OrderPage4 />} />
+                <Route path={routerPath.orderStep5} element={<OrderPage5 />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Route>
         </Routes>

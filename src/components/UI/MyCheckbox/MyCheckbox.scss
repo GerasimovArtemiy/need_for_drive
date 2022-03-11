@@ -1,0 +1,44 @@
+@import '../../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__step_checkbox {
+    margin-right: 16px;
+    font-family: $regular;
+}
+.checkbox {
+    -webkit-apperance: none;
+    appearance: none;
+    position: absolute;
+    &__label {
+        color: $gray-dark;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid $gray-dark;
+            margin-right: 8px;
+        }
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background: url(../../../assets/icons/checkbox-icon.svg) no-repeat;
+            left: 2px;
+            position: absolute;
+            opacity: 0;
+        }
+    }
+    &:checked + .checkbox__label {
+        color: $main-black;
+    }
+    &:checked + .checkbox__label:before {
+        border: 1px solid $main-accent;
+    }
+    &:checked + .checkbox__label:after {
+        opacity: 1;
+    }
+}

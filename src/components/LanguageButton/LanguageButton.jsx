@@ -4,6 +4,7 @@ import './LanguageButton.scss';
 
 export default function LanguageButton({ burgerActive }) {
     const [changeLanguage, setChangeLanguageActive] = useState(false);
+
     return (
         <div
             role="button"

@@ -6,16 +6,8 @@ export default function OrderPage1() {
     return (
         <div className="orderpage__step-1">
             <form className="orderpage__step-1_searches">
-                <MyInput
-                    label="Город"
-                    type="search"
-                    placeholder="Начните вводить город ..."
-                />
-                <MyInput
-                    label="Пункт выдачи"
-                    type="search"
-                    placeholder="Начните вводить пункт ..."
-                />
+                <MyInput label="Город" placeholder="Начните вводить город ..." />
+                <MyInput label="Пункт выдачи" placeholder="Начните вводить пункт ..." />
             </form>
             <div className="orderpage__step-1_map">
                 <h2>Выбрать на карте:</h2>

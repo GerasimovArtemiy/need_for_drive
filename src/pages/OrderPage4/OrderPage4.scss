@@ -1,0 +1,50 @@
+@import '../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__step-4 {
+    &_container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 736px;
+
+        @media screen and (max-width: 1023px) {
+            flex-direction: column;
+        }
+        @media screen and (max-width: 767px) {
+            margin: 0 16px;
+        }
+    }
+
+    &_content {
+        font-family: $regular;
+        & h1 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+    }
+    &_license-plate {
+        border: 1px solid $gray-dark;
+        border-radius: 4px;
+        display: inline-block;
+        padding: 4px 8px;
+        margin-bottom: 8px;
+    }
+    &_fuel {
+        margin-bottom: 8px;
+        & :first-child {
+            font-family: $bold;
+            margin-right: 8px;
+        }
+    }
+    &_access-date {
+        margin-bottom: 32px;
+        & :first-child {
+            font-family: $bold;
+        }
+    }
+}
+.temporary_block {
+    position: absolute;
+    top: 920px;
+    display: flex;
+    flex-direction: column;
+}

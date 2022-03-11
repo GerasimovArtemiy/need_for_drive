@@ -1,6 +1,6 @@
 @import '../../../assets/BasicColorsAndFonts.scss';
 
-.orderpage__step-1_search {
+.orderpage__step_search {
     font-family: $regular;
     font-size: 14px;
     line-height: 16px;
@@ -8,18 +8,18 @@
     text-align: right;
 
     @media screen and (max-width: 767px) {
-        text-align: center;
-        margin-right: 83px;
+        text-align: left;
     }
     & label {
+        margin-right: 8px;
+
         @media screen and (max-width: 767px) {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
     }
     & input {
         border-bottom: 1px solid $gray-dark;
-        margin-left: 8px;
         width: 224px;
         padding-left: 10px;
 

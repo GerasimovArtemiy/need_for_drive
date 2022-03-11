@@ -7,12 +7,4 @@ const routerPath = {
     orderStep4: '/need_for_drive/order/step_4',
     orderStep5: '/need_for_drive/order/step_5',
 };
-export const {
-    homePage,
-    orderPage,
-    orderStep1,
-    orderStep2,
-    orderStep3,
-    orderStep4,
-    orderStep5,
-} = routerPath;
+export default routerPath;
