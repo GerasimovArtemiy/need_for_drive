@@ -4,6 +4,7 @@ import CrossBtn from './CrossBtn/CrossBtn';
 import './MyInput.scss';
 
 export default function MyInput({ label, placeholder, typeDate, value, onChange, name }) {
+
     const [typeInput, setTypeInput] = useState('text');
     const handleType = () => {
         if (typeDate) {
