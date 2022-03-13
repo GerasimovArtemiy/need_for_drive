@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+// import axios from 'axios';
 import { setCity, setPoint } from '../../store/Slices/AllFormSlice';
 import { setLocationStep, setCarStep } from '../../store/Slices/ValidPageSlice';
 import MyInput from '../../components/UI/MyInput/MyInput';
+import Ymap from '../../components/Ymap/Ymap';
 import './OrderPage1.scss';
-import googleMap from '../../assets/img/google-map.jpg';
+import FetchAPI from '../../API/FetchAPI';
 
 export default function OrderPage1() {
     const dispatch = useDispatch();
@@ -21,6 +23,14 @@ export default function OrderPage1() {
     const pointChangeState = (value) => {
         dispatch(setPoint(value));
     };
+
+    async function fetch() {
+        const response = await FetchAPI.getAllPoints();
+        console.log(response.data);
+
+        return response.data;
+    }
+    fetch();
 
     return (
         <div className="orderpage__step-1">
@@ -42,7 +52,7 @@ export default function OrderPage1() {
             </form>
             <div className="orderpage__step-1_map">
                 <h2>Выбрать на карте:</h2>
-                <img src={googleMap} alt="map" />
+                <Ymap />
             </div>
         </div>
     );
