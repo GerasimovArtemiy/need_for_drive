@@ -81,7 +81,7 @@ export default function OrderPage1() {
             </form>
             <div className="orderpage__step-1_map">
                 <h2>Выбрать на карте:</h2>
-                <Ymap />
+                <Ymap city={city} point={point} />
             </div>
         </div>
     );
