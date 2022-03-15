@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import CrossBtn from './CrossBtn/CrossBtn';
+import classNames from 'classnames';
+import CrossBtn from './CrossBtn';
 import './MyInput.scss';
 
 export default function MyInput({ label, placeholder, typeDate, value, onChange, name }) {
-
     const [typeInput, setTypeInput] = useState('text');
     const handleType = () => {
         if (typeDate) {
@@ -13,7 +13,7 @@ export default function MyInput({ label, placeholder, typeDate, value, onChange,
     };
 
     return (
-        <div className="orderpage__step_search">
+        <div className="orderpage__step_MyInput">
             <label htmlFor={name}>{label}</label>
             <input
                 onFocus={handleType}
@@ -23,7 +23,13 @@ export default function MyInput({ label, placeholder, typeDate, value, onChange,
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
             />
-            {value !== '' && <CrossBtn type={typeInput} onChange={onChange} />}
+            <span
+                className={classNames('cross-input__btn', {
+                    'cross-input__btn_dates': typeInput === 'datetime-local',
+                })}
+            >
+                {value !== '' && <CrossBtn />}
+            </span>
         </div>
     );
 }

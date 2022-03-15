@@ -15,7 +15,7 @@ export default class FetchAPI {
         return responseAPI.get(pathAPI.point);
     }
 
-    static async getCityPoint(cityId) {
-        return responseAPI.get(`${pathAPI.cityPoint}${cityId}`);
+    static async getCityPoints(cityId) {
+        return responseAPI.get(`${pathAPI.cityPoints}${cityId}`);
     }
 }

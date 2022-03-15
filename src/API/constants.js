@@ -5,5 +5,5 @@ export const secret = process.env.REACT_APP_SECRET;
 export const pathAPI = {
     city: 'db/city',
     point: 'db/point',
-    cityPoint: 'db/point?cityId=',
+    cityPoints: 'db/point?cityId=',
 };

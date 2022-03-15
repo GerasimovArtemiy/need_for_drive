@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    city: '',
-    point: '',
+    city: {},
+    point: {},
     carClass: '',
     car: '',
     color: '',
@@ -36,10 +36,13 @@ export const AllFormSlice = createSlice({
     initialState,
     reducers: {
         setCity(state, action) {
-            state.city = action.payload;
+            state.city = { ...state.city, ...action.payload };
         },
         setPoint(state, action) {
-            state.point = action.payload;
+            state.point = { ...state.point, ...action.payload };
+        },
+        resetPoint(state) {
+            return { ...state, ...initialState, city: state.city };
         },
         setCarClass(state, action) {
             state.carClass = action.payload;
@@ -73,6 +76,7 @@ export const AllFormSlice = createSlice({
 export const {
     setCity,
     setPoint,
+    resetPoint,
     setCarClass,
     setCar,
     setColor,
