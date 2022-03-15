@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/need_for_drive/static/css/main.a703ba89.css",
-    "main.js": "/need_for_drive/static/js/main.93977b55.js",
+    "main.css": "/need_for_drive/static/css/main.3c6a87a2.css",
+    "main.js": "/need_for_drive/static/js/main.8b60b111.js",
     "static/js/787.859d4105.chunk.js": "/need_for_drive/static/js/787.859d4105.chunk.js",
     "static/media/Roboto-Bold.svg": "/need_for_drive/static/media/Roboto-Bold.43841e35c236fddb18f1.svg",
     "static/media/Roboto-Light.svg": "/need_for_drive/static/media/Roboto-Light.094e956d58ab400956e2.svg",
@@ -36,13 +36,14 @@
     "static/media/checkbox-icon.svg": "/need_for_drive/static/media/checkbox-icon.599a4157a9af0498854e.svg",
     "static/media/slider-arrow_left.svg": "/need_for_drive/static/media/slider-arrow_left.1752ae9160db5265a941.svg",
     "static/media/slider-arrow_right.svg": "/need_for_drive/static/media/slider-arrow_right.7591c327fb5160f95b31.svg",
+    "static/media/placemark.svg": "/need_for_drive/static/media/placemark.457e906945276fb0758a989660dd3bc9.svg",
     "static/media/order-arrow_nav.svg": "/need_for_drive/static/media/order-arrow_nav.ba4fa0999feaf41ba05e32f2fd2098f4.svg",
-    "main.a703ba89.css.map": "/need_for_drive/static/css/main.a703ba89.css.map",
-    "main.93977b55.js.map": "/need_for_drive/static/js/main.93977b55.js.map",
+    "main.3c6a87a2.css.map": "/need_for_drive/static/css/main.3c6a87a2.css.map",
+    "main.8b60b111.js.map": "/need_for_drive/static/js/main.8b60b111.js.map",
     "787.859d4105.chunk.js.map": "/need_for_drive/static/js/787.859d4105.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a703ba89.css",
-    "static/js/main.93977b55.js"
+    "static/css/main.3c6a87a2.css",
+    "static/js/main.8b60b111.js"
   ]
 }
