@@ -7,4 +7,7 @@ export const pathAPI = {
     city: 'db/city',
     point: 'db/point',
     cityPoints: 'db/point?cityId=',
+    carClass: 'db/category',
+    cars: 'db/car',
+    сarsByClass: 'db/category?categoryId=',
 };

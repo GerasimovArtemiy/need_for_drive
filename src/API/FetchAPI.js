@@ -18,4 +18,16 @@ export default class FetchAPI {
     static async getCityPoints(cityId) {
         return responseAPI.get(`${pathAPI.cityPoints}${cityId}`);
     }
+
+    static async getcarClass() {
+        return responseAPI.get(pathAPI.carClass);
+    }
+
+    static async getCars() {
+        return responseAPI.get(pathAPI.cars);
+    }
+
+    static async getCarsByClass(id) {
+        return responseAPI.get(`${pathAPI.сarsByClass}${id}`);
+    }
 }
