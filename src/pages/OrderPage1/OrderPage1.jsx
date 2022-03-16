@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCity, setPoint, resetPoint, resetForm } from '../../store/Slices/AllFormSlice';
 import { setLocationStep, setCarStep } from '../../store/Slices/ValidPageSlice';
-import { getCities, getCityPoints, resetFetchData } from '../../store/Slices/FetchDataSlice';
+import { getCities, getCityPoints, resetFetchLocation } from '../../store/Slices/FetchLocationSlice';
 import SelectInput from './SelectInput/SelectInput';
 import Ymap from '../../components/Ymap/Ymap';
 import './OrderPage1.scss';
@@ -10,7 +10,7 @@ import './OrderPage1.scss';
 export default function OrderPage1() {
     const dispatch = useDispatch();
     const { city, point } = useSelector((state) => state.allForm);
-    const { fetchCities, fetchCityPoints } = useSelector((state) => state.fetchData);
+    const { fetchCities, fetchCityPoints } = useSelector((state) => state.fetchLocation);
     const cityOptions = fetchCities.data.map(({ id, name }) => ({ id, value: name, label: name }));
     const pointOptions = fetchCityPoints.data.map(({ id, address }) => ({ id, value: address, label: address }));
 
@@ -33,14 +33,14 @@ export default function OrderPage1() {
 
     const cityChangeState = (option) => {
         if (option) {
-            if (option.value !== city.name) dispatch(resetFetchData());
+            if (option.value !== city.name) dispatch(resetFetchLocation());
             dispatch(resetForm());
             dispatch(setCity({ name: option.value, id: option.id }));
         }
     };
     const onReset = (e) => {
         if (e.currentTarget.id === 'city') {
-            dispatch(resetFetchData());
+            dispatch(resetFetchLocation());
             dispatch(resetForm());
         } else {
             dispatch(resetPoint());

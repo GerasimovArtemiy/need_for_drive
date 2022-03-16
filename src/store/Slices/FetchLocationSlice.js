@@ -21,11 +21,11 @@ export const getCityPoints = createAsyncThunk('fetchCityPoints/getCityPoints', a
     return response.data.data;
 });
 
-const FetchDataSlice = createSlice({
-    name: 'fetchData',
+const FetchLocationSlice = createSlice({
+    name: 'fetchLocation',
     initialState,
     reducers: {
-        resetFetchData(state) {
+        resetFetchLocation(state) {
             return { ...state, ...initialState };
         },
     },
@@ -62,5 +62,5 @@ const FetchDataSlice = createSlice({
     },
 });
 
-export const { resetFetchData } = FetchDataSlice.actions;
-export default FetchDataSlice.reducer;
+export const { resetFetchLocation } = FetchLocationSlice.actions;
+export default FetchLocationSlice.reducer;
