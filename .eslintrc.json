@@ -22,6 +22,10 @@
     },
     "plugins": ["react"],
     "rules": {
+        "no-restricted-syntax": "off",
+        "react/no-array-index-key": "off",
+        "no-await-in-loop": "off",
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "import/no-extraneous-dependencies": ["error",  {"devDependencies": true}],
         "react/jsx-props-no-spreading": "off",

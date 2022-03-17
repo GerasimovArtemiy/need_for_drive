@@ -8,13 +8,13 @@ const initialState = {
     color: '',
     dateFrom: '',
     dateTo: '',
-    tariff: 'На сутки, 1999 ₽/сутки',
+    tariff: '',
     extraServices: [
         {
             id: 0,
             title: 'Полный бак, 500р',
             value: 'Полный бак',
-            checked: true,
+            checked: false,
         },
         {
             id: 1,
