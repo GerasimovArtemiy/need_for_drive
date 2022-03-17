@@ -28,7 +28,7 @@ export default function MyInput({ label, placeholder, typeDate, value, onChange,
                     'cross-input__btn_dates': typeInput === 'datetime-local',
                 })}
             >
-                {value !== '' && <CrossBtn />}
+                {value && <CrossBtn />}
             </span>
         </div>
     );
