@@ -98,7 +98,6 @@ export default function Ymap() {
                                     }}
                                 />
                             ))}
-                        {/* <Placemark geometry={point.name ? center : ['', '']} options={optionsForPlacemark} /> */}
                     </Map>
                 </div>
             </YMaps>
