@@ -1,8 +1,15 @@
 @import '../../../../assets/BasicColorsAndFonts.scss';
 
 .orderpage__step_radiobutton {
-    margin-right: 16px;
+    margin: 0 16px 8px 0;
     font-family: $regular;
+    &:last-child {
+        margin: 0 0 0 0;
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 15px;
+    }
 }
 .radiobutton {
     -webkit-apperance: none;

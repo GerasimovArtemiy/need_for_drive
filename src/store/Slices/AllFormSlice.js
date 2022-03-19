@@ -3,12 +3,13 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     city: {},
     point: {},
-    carClass: '',
-    car: '',
+    carClass: {},
+    car: {},
     color: '',
     dateFrom: '',
     dateTo: '',
-    tariff: '',
+    rentTime: '',
+    tariff: {},
     extraServices: [
         {
             id: 0,
@@ -29,6 +30,7 @@ const initialState = {
             checked: false,
         },
     ],
+    totalPrice: 0,
 };
 
 export const AllFormSlice = createSlice({
@@ -59,6 +61,9 @@ export const AllFormSlice = createSlice({
         setDateTo(state, action) {
             state.dateTo = action.payload;
         },
+        setRentTime(state, action) {
+            state.rentTime = action.payload;
+        },
         setTariff(state, action) {
             state.tariff = action.payload;
         },
@@ -66,6 +71,12 @@ export const AllFormSlice = createSlice({
             state.extraServices = state.extraServices.map((service) =>
                 service.id === action.payload ? { ...service, checked: !service.checked } : service
             );
+        },
+        resetExtraServices(state) {
+            state.extraServices = initialState.extraServices;
+        },
+        setTotatalPrice(state, action) {
+            state.totalPrice = action.payload;
         },
         resetForm(state) {
             return { ...state, ...initialState };
@@ -82,8 +93,11 @@ export const {
     setColor,
     setDateFrom,
     setDateTo,
+    setRentTime,
     setTariff,
     setExtraServices,
+    setTotatalPrice,
+    resetExtraServices,
     resetForm,
 } = AllFormSlice.actions;
 

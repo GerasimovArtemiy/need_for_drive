@@ -7,8 +7,8 @@ export default function MyModal({ children, visible, setVisible }) {
             role="button"
             tabIndex={0}
             className={`orderpage__step_modal ${visible ? 'orderpage__step_modal-active' : ''}`}
-            onClick={() => setVisible(!visible)}
-            onKeyDown={() => setVisible(!visible)}
+            onClick={setVisible}
+            onKeyDown={setVisible}
         >
             <div
                 role="button"

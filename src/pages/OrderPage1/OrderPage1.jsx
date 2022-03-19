@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCity, setPoint, resetPoint, resetForm } from '../../store/Slices/AllFormSlice';
-import { setLocationStep, setCarStep } from '../../store/Slices/ValidPageSlice';
+import { setLocationStep, setCarStep, setMoreStep, setTotalStep } from '../../store/Slices/ValidPageSlice';
 import { getCities, getCityPoints, resetFetchLocation } from '../../store/Slices/FetchLocationSlice';
 import SelectInput from './SelectInput/SelectInput';
 import Ymap from '../../components/Ymap/Ymap';
@@ -36,14 +36,20 @@ export default function OrderPage1() {
             if (option.value !== city.name) dispatch(resetFetchLocation());
             dispatch(resetForm());
             dispatch(setCity({ name: option.value, id: option.id }));
+            dispatch(setMoreStep(false));
+            dispatch(setTotalStep(false));
         }
     };
     const onReset = (e) => {
         if (e.currentTarget.id === 'city') {
             dispatch(resetFetchLocation());
             dispatch(resetForm());
+            dispatch(setMoreStep(false));
+            dispatch(setTotalStep(false));
         } else {
             dispatch(resetPoint());
+            dispatch(setMoreStep(false));
+            dispatch(setTotalStep(false));
         }
     };
     const pointChangeState = (option) => {

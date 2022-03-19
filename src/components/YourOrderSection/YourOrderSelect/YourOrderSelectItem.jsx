@@ -4,9 +4,11 @@ import './YourOrderSelectItem.scss';
 export default function YourOrderPickModel({ title, subtitle }) {
     return (
         <div className="orderpage__your-order_item">
-            <div>{title}</div>
-            <div />
-            <div>{subtitle}</div>
+            <div className="orderpage__your-order_title">{title}</div>
+            <div className="orderpage__your-order_dotes" />
+            <div className={subtitle === 'Ошибка!' ? 'orderpage__your-order_error' : 'orderpage__your-order_info'}>
+                {subtitle}
+            </div>
         </div>
     );
 }

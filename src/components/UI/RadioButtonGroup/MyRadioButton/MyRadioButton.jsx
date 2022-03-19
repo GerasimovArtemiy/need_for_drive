@@ -1,34 +1,47 @@
 import PropTypes from 'prop-types';
 import './MyRadioButton.scss';
 
-export default function MyRadioButton({ id, labelText, checked, value, onChange }) {
+export default function MyRadioButton({ name, checked, value, onChange }) {
+    function showLabelText(labelText) {
+        if (labelText === 'color') {
+            return value;
+        }
+        if (labelText === 'tariff') {
+            return `${value.rateTypeId?.name}, ${value.price}₽ / ${value.rateTypeId?.unit}`;
+        }
+        return value.name;
+    }
+
     return (
-        <div className="orderpage__step_radiobutton">
+        <div
+            className="orderpage__step_radiobutton"
+            role="button"
+            tabIndex={0}
+            onClick={() => onChange(value)}
+            onKeyDown={() => onChange(value)}
+        >
             <input
                 className="radiobutton"
-                id={`radio${id}`}
                 type="radio"
-                value={value}
+                value={value.name}
                 checked={checked}
                 onChange={() => onChange(value)}
             />
-            <label htmlFor={`radio${id}`} className="radiobutton__label">
-                {labelText}
+            <label htmlFor={`radio${name}`} className="radiobutton__label">
+                {showLabelText(name)}
             </label>
         </div>
     );
 }
 MyRadioButton.propTypes = {
-    labelText: PropTypes.string,
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.instanceOf(Object), PropTypes.string]),
     checked: PropTypes.bool,
-    id: PropTypes.number,
+    name: PropTypes.string,
     onChange: PropTypes.func,
 };
 MyRadioButton.defaultProps = {
-    labelText: 'Заголовок',
-    value: '',
+    value: {},
     checked: false,
-    id: 0,
+    name: 'Заголовок',
     onChange: () => {},
 };

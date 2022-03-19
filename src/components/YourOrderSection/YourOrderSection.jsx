@@ -1,9 +1,11 @@
 import { useSelector } from 'react-redux';
 import YourOrderSelectItem from './YourOrderSelect/YourOrderSelectItem';
 import './YourOrderSection.scss';
+import TotalPrice from './TotalPrice/TotalPrice';
+import YourOrderButton from './YourOrderButton/YourOrderButton';
 
 export default function YourOrderSection() {
-    const { city, point, car, color, tariff, extraServices } = useSelector((state) => state.allForm);
+    const { city, point, car, color, rentTime, tariff, extraServices } = useSelector((state) => state.allForm);
     const orderItems = [
         {
             id: 0,
@@ -13,10 +15,11 @@ export default function YourOrderSection() {
         {
             id: 1,
             title: 'Модель',
-            subtitle: car,
+            subtitle: car.name,
         },
         { id: 2, title: 'Цвет', subtitle: color },
-        { id: 4, title: 'Тариф', subtitle: tariff.split(',')[0] },
+        { id: 3, title: 'Длительность аренды', subtitle: rentTime },
+        { id: 4, title: 'Тариф', subtitle: tariff.rateTypeId?.name },
         { id: 5, title: 'Полный бак', subtitle: extraServices[0].checked && 'Да' },
         { id: 6, title: 'Детское кресло', subtitle: extraServices[1].checked && 'Да' },
         { id: 7, title: 'Правый руль', subtitle: extraServices[2].checked && 'Да' },
@@ -32,12 +35,8 @@ export default function YourOrderSection() {
                             <YourOrderSelectItem key={item.id} title={item.title} subtitle={item.subtitle} />
                         )
                 )}
-                <div className="orderpage__your-order_price">
-                    <span>Цена:</span> от 8 000 до 12 000 ₽
-                </div>
-                <button type="button" className="orderpage__your-order_btn">
-                    Выбрать модель
-                </button>
+                <TotalPrice />
+                <YourOrderButton />
             </section>
             <div className="orderpage__your-order_vertical-line">
                 <div className="orderpage__your-order_vertical-line-empty-1">

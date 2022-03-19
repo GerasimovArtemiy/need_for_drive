@@ -23,13 +23,12 @@ const ValidPageSlice = createSlice({
         setTotalStep(state, action) {
             state.totalStep = action.payload;
         },
-        resetValid(state) {
+        resetValidPage(state) {
             return { ...state, ...initialState };
         },
     },
 });
 
-export const { setLocationStep, setCarStep, setMoreStep, setTotalStep, resetValid } =
-    ValidPageSlice.actions;
+export const { setLocationStep, setCarStep, setMoreStep, setTotalStep, resetValidPage } = ValidPageSlice.actions;
 
 export default ValidPageSlice.reducer;

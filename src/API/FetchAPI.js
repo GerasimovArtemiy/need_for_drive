@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { baseUrl, applicationId, pathAPI } from './constants';
+import { baseUrl, applicationId } from './constants';
+import APILinks from './APILinks';
 
 const responseAPI = axios.create({
     baseURL: baseUrl,
@@ -8,26 +9,30 @@ const responseAPI = axios.create({
 
 export default class FetchAPI {
     static async getCity() {
-        return responseAPI.get(pathAPI.city);
+        return responseAPI.get(APILinks.city);
     }
 
     static async getAllPoints() {
-        return responseAPI.get(pathAPI.point);
+        return responseAPI.get(APILinks.point);
     }
 
     static async getCityPoints(cityId) {
-        return responseAPI.get(`${pathAPI.cityPoints}${cityId}`);
+        return responseAPI.get(`${APILinks.cityPoints}${cityId}`);
     }
 
-    static async getcarClass() {
-        return responseAPI.get(pathAPI.carClass);
+    static async getCarClass() {
+        return responseAPI.get(APILinks.carClass);
     }
 
     static async getCars() {
-        return responseAPI.get(pathAPI.cars);
+        return responseAPI.get(APILinks.cars);
     }
 
     static async getCarsByClass(id) {
-        return responseAPI.get(`${pathAPI.сarsByClass}${id}`);
+        return responseAPI.get(`${APILinks.сarsByClass}${id}`);
+    }
+
+    static async getFetchTariff() {
+        return responseAPI.get(APILinks.tariff);
     }
 }

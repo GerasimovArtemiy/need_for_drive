@@ -2,25 +2,25 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import FetchAPI from '../../API/FetchAPI';
 
 const initialState = {
-    carClass: {
+    fetchClass: {
         data: [],
         status: null,
     },
-    cars: {
+    fetchCars: {
         data: [],
         status: null,
     },
 };
 
-export const getCarClass = createAsyncThunk('carClass/getCarClass', async () => {
+export const getFetchClass = createAsyncThunk('fetchClass/getFetchClass', async () => {
     const response = await FetchAPI.getCarClass();
     return response.data.data;
 });
-export const getCars = createAsyncThunk('cars/getCars', async () => {
+export const getFetchCars = createAsyncThunk('fetchCars/getFetchCars', async () => {
     const response = await FetchAPI.getCars();
     return response.data.data;
 });
-export const getCarsByClass = createAsyncThunk('cars/getCarsByClass', async (id) => {
+export const getCarsByClass = createAsyncThunk('fetchCars/getCarsByClass', async (id) => {
     const response = await FetchAPI.getCarsByClass(id);
     return response.data.data;
 });
@@ -34,49 +34,49 @@ const FetchCarsSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        builder.addCase(getCarClass.pending, (state) => {
-            state.carClass.status = 'loading';
+        builder.addCase(getFetchClass.pending, (state) => {
+            state.fetchClass.status = 'loading';
         });
-        builder.addCase(getCarClass.fulfilled, (state, action) => {
+        builder.addCase(getFetchClass.fulfilled, (state, action) => {
             if (action.payload) {
-                state.carClass.data = action.payload;
-                state.carClass.status = 'resolved';
+                state.fetchClass.data = action.payload;
+                state.fetchClass.status = 'resolved';
             } else {
-                state.carClass.status = 'rejected';
+                state.fetchClass.status = 'rejected';
             }
         });
-        builder.addCase(getCarClass.rejected, (state) => {
-            state.carClass.status = 'rejected';
+        builder.addCase(getFetchClass.rejected, (state) => {
+            state.fetchClass.status = 'rejected';
         });
 
-        builder.addCase(getCars.pending, (state) => {
-            state.cars.status = 'loading';
+        builder.addCase(getFetchCars.pending, (state) => {
+            state.fetchCars.status = 'loading';
         });
-        builder.addCase(getCars.fulfilled, (state, action) => {
+        builder.addCase(getFetchCars.fulfilled, (state, action) => {
             if (action.payload) {
-                state.cars.data = action.payload;
-                state.cars.status = 'resolved';
+                state.fetchCars.data = action.payload;
+                state.fetchCars.status = 'resolved';
             } else {
-                state.cars.status = 'rejected';
+                state.fetchCars.status = 'rejected';
             }
         });
-        builder.addCase(getCars.rejected, (state) => {
-            state.cars.status = 'rejected';
+        builder.addCase(getFetchCars.rejected, (state) => {
+            state.fetchCars.status = 'rejected';
         });
 
         builder.addCase(getCarsByClass.pending, (state) => {
-            state.cars.status = 'loading';
+            state.fetchCars.status = 'loading';
         });
         builder.addCase(getCarsByClass.fulfilled, (state, action) => {
             if (action.payload) {
-                state.cars.data = action.payload;
-                state.cars.status = 'resolved';
+                state.fetchCars.data = action.payload;
+                state.fetchCars.status = 'resolved';
             } else {
-                state.cars.status = 'rejected';
+                state.fetchCars.status = 'rejected';
             }
         });
         builder.addCase(getCarsByClass.rejected, (state) => {
-            state.cars.status = 'rejected';
+            state.fetchCars.status = 'rejected';
         });
     },
 });

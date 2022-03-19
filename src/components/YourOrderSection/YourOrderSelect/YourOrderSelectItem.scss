@@ -1,18 +1,20 @@
 @import '../../../assets/BasicColorsAndFonts.scss';
 
-.orderpage__your-order_item {
-    margin-bottom: 16px;
-    font-family: $regular;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    min-width: 220px;
-    & :nth-child(1) {
+.orderpage__your-order {
+    &_item {
+        margin-bottom: 16px;
+        font-family: $regular;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        min-width: 220px;
+    }
+    &_title {
         display: flex;
         align-items: flex-end;
         max-width: 150px;
     }
-    & :nth-child(2) {
+    &_dotes {
         flex: 1 1 auto;
         border-bottom: 1px dotted $gray-dark;
         margin: 0 12px;
@@ -22,10 +24,21 @@
             margin: 0 5px;
         }
     }
-    & :nth-child(3) {
+    &_info {
         line-height: 16px;
         color: $gray-dark;
         max-width: 102px;
         text-align: right;
+
+        @media screen and (max-width: 767px) {
+            max-width: 150px;
+        }
+    }
+    &_error {
+        line-height: 16px;
+        color: red;
+        max-width: 102px;
+        text-align: right;
+        font-family: $bold;
     }
 }

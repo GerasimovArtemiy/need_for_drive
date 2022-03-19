@@ -3,6 +3,8 @@ import ValidPageReducer from './Slices/ValidPageSlice';
 import AllFormReducer from './Slices/AllFormSlice';
 import FetchLocationReducer from './Slices/FetchLocationSlice';
 import FetchCarsReducer from './Slices/FetchCarsSlice';
+import FetchMoreReducer from './Slices/fetchMoreSlice';
+import TotalStepReducer from './Slices/TotalSlice';
 
 export default configureStore({
     reducer: {
@@ -10,5 +12,7 @@ export default configureStore({
         allForm: AllFormReducer,
         fetchLocation: FetchLocationReducer,
         fetchCars: FetchCarsReducer,
+        fetchMore: FetchMoreReducer,
+        totalStep: TotalStepReducer,
     },
 });
