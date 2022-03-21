@@ -10,6 +10,10 @@ const initialState = {
         data: [],
         status: null,
     },
+    mapCenter: {
+        center: [54.31, 48.39],
+        zoom: 12,
+    },
 };
 
 export const getCities = createAsyncThunk('fetchCities/getCities', async () => {
@@ -29,6 +33,9 @@ const FetchLocationSlice = createSlice({
     name: 'fetchLocation',
     initialState,
     reducers: {
+        setMapCenter(state, action) {
+            state.mapCenter = { ...state.mapCenter, ...action.payload };
+        },
         resetFetchLocation(state) {
             return { ...state, ...initialState };
         },
@@ -81,5 +88,5 @@ const FetchLocationSlice = createSlice({
     },
 });
 
-export const { resetFetchLocation } = FetchLocationSlice.actions;
+export const { resetFetchLocation, setMapCenter } = FetchLocationSlice.actions;
 export default FetchLocationSlice.reducer;

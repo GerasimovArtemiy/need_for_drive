@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { YMaps, Map, Placemark } from 'react-yandex-maps';
+import { setMapCenter } from '../../store/Slices/FetchLocationSlice';
 import { yandexMapKey } from '../../API/constants';
 import { setPoint } from '../../store/Slices/AllFormSlice';
 import placemark from '../../assets/icons/placemark.svg';
@@ -9,22 +10,20 @@ import './Ymap.scss';
 export default function Ymap() {
     const dispatch = useDispatch();
     const { city, point } = useSelector((state) => state.allForm);
+    const { mapCenter } = useSelector((state) => state.fetchLocation);
     const { fetchCityPoints } = useSelector((state) => state.fetchLocation);
     const [ymap, setYmap] = useState(null);
-    const [zoom, setZoom] = useState(12);
-    const [center, setCenter] = useState([54.31, 48.39]);
     const [coords, setCoords] = useState([]);
     const optionsForPlacemark = {
         iconLayout: 'default#image',
         iconImageSize: [16, 16],
         iconImageHref: placemark,
     };
-    const stateForMap = {
-        center,
-        zoom,
-    };
-    function getGeocoder(ymaps) {
-        setYmap(ymaps);
+
+    async function getGeocoder(ymaps) {
+        if (ymaps) {
+            setYmap(ymaps);
+        }
     }
 
     async function getGeolocation(address) {
@@ -45,31 +44,35 @@ export default function Ymap() {
     }
     async function changeCenterState(address, isCity = false) {
         if (isCity) {
-            setZoom(12);
+            dispatch(setMapCenter({ zoom: 12 }));
         } else {
-            setZoom(16);
+            dispatch(setMapCenter({ zoom: 16 }));
         }
         const pointLocation = await getGeolocation(address);
-        setCenter(pointLocation);
+        dispatch(setMapCenter({ center: pointLocation }));
     }
 
     useEffect(() => {
-        if (fetchCityPoints.data) {
-            getPointsMap(fetchCityPoints.data);
+        if (ymap) {
+            if (fetchCityPoints.data) {
+                getPointsMap(fetchCityPoints.data);
+            }
+            if (city.name) {
+                changeCenterState(city.name, true);
+            }
         }
-        if (city.name) {
-            changeCenterState(city.name, true);
-        }
-    }, [fetchCityPoints.data]);
+    }, [fetchCityPoints.data, ymap]);
 
     useEffect(() => {
-        if (!point.name && city.name) {
-            changeCenterState(city.name, true);
+        if (ymap) {
+            if (!point.name && city.name) {
+                changeCenterState(city.name, true);
+            }
+            if (point.name) {
+                changeCenterState(`${city.name},${point.name}`);
+            }
         }
-        if (point.name) {
-            changeCenterState(`${city.name},${point.name}`);
-        }
-    }, [point.name]);
+    }, [point.name, ymap]);
 
     return (
         <div>
@@ -81,7 +84,7 @@ export default function Ymap() {
                 }}
             >
                 <div>
-                    <Map className="yandexmap__map" state={stateForMap} onLoad={(ymaps) => getGeocoder(ymaps)}>
+                    <Map className="yandexmap__map" state={mapCenter} onLoad={(ymaps) => getGeocoder(ymaps)}>
                         {coords &&
                             coords?.map((coordinate, index) => (
                                 <Placemark
