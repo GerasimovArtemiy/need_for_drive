@@ -12,5 +12,10 @@
     &_filter-models {
         display: flex;
         margin-bottom: 48px;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 1024px) {
+            margin-bottom: 35px;
+        }
     }
 }

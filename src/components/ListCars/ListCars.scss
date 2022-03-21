@@ -14,13 +14,14 @@
         flex-direction: column;
         width: 368px;
         height: 224px;
+        &-active {
+            border: 1px solid $main-accent;
+            z-index: 2;
+        }
         &:hover {
             border: 1px solid $gray-dark;
             z-index: 1;
-        }
-        &:active {
-            border: 1px solid $main-accent;
-            z-index: 1;
+            cursor: pointer;
         }
 
         @media screen and (max-width: 1237px) {
@@ -60,8 +61,11 @@
             align-self: center;
         }
         & img {
+            max-width: 256px;
+            height: 116px;
             @media screen and (max-width: 370px) {
-                width: 200px;
+                width: 170px;
+                height: 90px;
             }
         }
     }

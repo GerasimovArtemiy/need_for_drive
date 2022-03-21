@@ -1,0 +1,30 @@
+@import '../../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__your-order_btn {
+    height: 48px;
+    border-radius: 8px;
+    background-color: #eee;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: $medium;
+
+    @media screen and (max-width: 1439px) {
+        font-size: 16px;
+        height: 42px;
+        margin-bottom: 16px;
+    }
+    &-active {
+        height: 48px;
+        border-radius: 8px;
+        background: $button-default;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: $medium;
+        &:hover {
+            background: $button-hover;
+        }
+        &:active {
+            background: $button-active;
+        }
+    }
+}

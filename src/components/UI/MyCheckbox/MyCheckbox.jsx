@@ -1,21 +1,29 @@
 import PropTypes from 'prop-types';
 import './MyCheckbox.scss';
 
-export default function MyCheckbox({ id, labelText }) {
+export default function MyCheckbox({ checkbox, onChange }) {
+    const { id, title, checked } = checkbox;
+
     return (
         <div className="orderpage__step_checkbox">
-            <input id={`checkbox${id}`} type="checkbox" className="checkbox" />
+            <input
+                id={`checkbox${id}`}
+                type="checkbox"
+                checked={checked}
+                className="checkbox"
+                onChange={() => onChange(id)}
+            />
             <label htmlFor={`checkbox${id}`} className="checkbox__label">
-                {labelText}
+                {title}
             </label>
         </div>
     );
 }
 MyCheckbox.propTypes = {
-    labelText: PropTypes.string,
-    id: PropTypes.string,
+    checkbox: PropTypes.instanceOf(Object),
+    onChange: PropTypes.func,
 };
 MyCheckbox.defaultProps = {
-    labelText: 'Заголовок',
-    id: '',
+    checkbox: {},
+    onChange: () => {},
 };

@@ -1,10 +1,13 @@
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { setOrderModal } from '../../store/Slices/TotalSlice';
 import './ConfirmOrder.scss';
 import MyModal from '../UI/MyModal/MyModal';
 
-export default function ConfirmOrder({ visibleModal, setVisibleModal }) {
+export default function ConfirmOrder() {
+    const dispatch = useDispatch();
+    const { orderModal } = useSelector((state) => state.totalStep);
     return (
-        <MyModal visible={visibleModal} setVisible={setVisibleModal}>
+        <MyModal visible={orderModal} setVisible={() => dispatch(setOrderModal(!orderModal))}>
             <div className="orderpage__step-4_modal">
                 <h1>Подтвердить заказ</h1>
                 <div className="orderpage__step-4_modal-btns">
@@ -12,7 +15,7 @@ export default function ConfirmOrder({ visibleModal, setVisibleModal }) {
                         Подтвердить
                     </button>
                     <button
-                        onClick={() => setVisibleModal(!visibleModal)}
+                        onClick={() => dispatch(setOrderModal(!orderModal))}
                         className="orderpage__step-4_modal-btn orderpage__step-4_modal-btn-back"
                         type="button"
                     >
@@ -23,11 +26,3 @@ export default function ConfirmOrder({ visibleModal, setVisibleModal }) {
         </MyModal>
     );
 }
-ConfirmOrder.propTypes = {
-    visibleModal: PropTypes.bool,
-    setVisibleModal: PropTypes.func,
-};
-ConfirmOrder.defaultProps = {
-    visibleModal: false,
-    setVisibleModal: () => {},
-};

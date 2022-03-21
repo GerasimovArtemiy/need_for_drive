@@ -1,0 +1,48 @@
+@import '../../../assets/BasicColorsAndFonts.scss';
+
+.orderpage__navigation {
+    &_item {
+        display: flex;
+
+        @media screen and (max-width: 767px) {
+            flex: 1 1 auto;
+        }
+        @media screen and (max-width: 390px) {
+            flex: 0 0 auto;
+        }
+    }
+
+    &_arr {
+        width: 37px;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 390px) {
+            width: 20px;
+        }
+    }
+    & :nth-child(5) {
+        & :first-child {
+            @media screen and (max-width: 390px) {
+                width: 40px;
+                overflow: hidden;
+            }
+        }
+    }
+    &_link {
+        color: $main-black;
+        font-family: $bold;
+        font-size: 14px;
+        text-decoration: none;
+        &-active {
+            @extend .orderpage__navigation_link;
+            color: $main-accent;
+        }
+        &-disabled {
+            @extend .orderpage__navigation_link;
+            color: $gray-dark;
+            pointer-events: none;
+        }
+    }
+}
