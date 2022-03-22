@@ -22,8 +22,8 @@ export default function OrderPage3() {
     const colorSelectCar = car.colors;
 
     useEffect(() => {
-        dispatch(setMoreStep(Boolean(color && rentTime !== 'Ошибка!' && tariff)));
-        dispatch(setTotalStep(Boolean(color && rentTime !== 'Ошибка!' && tariff)));
+        dispatch(setMoreStep(Boolean(color && rentTime && rentTime !== 'Ошибка!' && tariff.rateTypeId)));
+        dispatch(setTotalStep(Boolean(color && rentTime && rentTime !== 'Ошибка!' && tariff.rateTypeId)));
     }, [dispatch, color, rentTime, tariff]);
 
     useEffect(() => {

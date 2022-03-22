@@ -6,14 +6,16 @@
         justify-content: space-between;
         max-width: 736px;
 
+        margin: 0 64px 16px 0;
+
         @media screen and (max-width: 1023px) {
             flex-direction: column;
+            margin: 0 32px 16px 0;
         }
         @media screen and (max-width: 767px) {
-            margin: 0 16px;
+            margin: 0 16px 0px 16px;
         }
     }
-
     &_content {
         font-family: $regular;
         & h1 {
@@ -24,21 +26,28 @@
     &_license-plate {
         border: 1px solid $gray-dark;
         border-radius: 4px;
-        display: inline-block;
-        padding: 4px 8px;
+        display: flex;
+        height: 24px;
+        width: 94px;
         margin-bottom: 8px;
+        justify-content: center;
+        align-items: center;
     }
-    &_fuel {
+    &_item {
         margin-bottom: 8px;
         & :first-child {
             font-family: $bold;
             margin-right: 8px;
         }
+        & :last-child {
+            font-weight: 300;
+            color: $gray-dark;
+        }
     }
-    &_access-date {
-        margin-bottom: 32px;
-        & :first-child {
-            font-family: $bold;
+    &_img-car {
+        & img {
+            height: auto;
+            max-width: 250px;
         }
     }
 }
