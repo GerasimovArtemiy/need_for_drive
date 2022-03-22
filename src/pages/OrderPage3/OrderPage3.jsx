@@ -51,12 +51,12 @@ export default function OrderPage3() {
         const unixDateTo = typeof to === 'string' ? Date.parse(to) : to;
         if (unixDateTo > unixDateFrom) {
             const time = unixDateTo - unixDateFrom;
-            const days = Math.floor(time / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((time / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((time / (1000 * 60)) % 60);
-            const rentDuration = `${days === 0 ? '' : days}д ${hours === 0 ? '' : hours}ч ${
-                minutes === 0 ? '' : minutes
-            }м`;
+            const days = Math.floor(time / (1000 * 60 * 60 * 24)) ? `${Math.floor(time / (1000 * 60 * 60 * 24))}д` : '';
+            const hours = Math.floor((time / (1000 * 60 * 60)) % 24)
+                ? `${Math.floor((time / (1000 * 60 * 60)) % 24)}ч`
+                : '';
+            const minutes = Math.floor((time / (1000 * 60)) % 60) ? `${Math.floor((time / (1000 * 60)) % 60)}м` : '';
+            const rentDuration = `${days} ${hours} ${minutes}`;
             return rentDuration;
         }
         return 'Ошибка!';
