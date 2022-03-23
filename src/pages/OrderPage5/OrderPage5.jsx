@@ -1,4 +1,3 @@
-// import carTest from '../../assets/img/car-img.jpg';
 import OrderPage4 from '../OrderPage4/OrderPage4';
 import './OrderPage5.scss';
 
