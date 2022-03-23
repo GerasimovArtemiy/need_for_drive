@@ -35,4 +35,12 @@ export default class FetchAPI {
     static async getFetchTariff() {
         return responseAPI.get(APILinks.tariff);
     }
+
+    static async postOrder(order) {
+        return responseAPI.post(APILinks.order, { ...order });
+    }
+
+    static async getOrderById(orderId) {
+        return responseAPI.get(`${APILinks.order}${orderId}`);
+    }
 }

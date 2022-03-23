@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ConfirmOrder from '../../components/ConfirmOrder/ConfirmOrder';
-import routerPath from '../../components/Routes/routerPath';
 import './OrderPage4.scss';
 
 export default function OrderPage4() {
@@ -28,6 +26,7 @@ export default function OrderPage4() {
         { id: 4, title: 'Правый руль', subtitle: extraServices[2].checked && 'Да' },
         { id: 5, title: 'Доступна с', subtitle: dateTransform },
     ];
+
     return (
         <div className="orderpage__step-4">
             <ConfirmOrder />
@@ -47,22 +46,6 @@ export default function OrderPage4() {
                             )
                     )}
                 </div>
-                <div className="temporary_block">
-                    <Link to={routerPath.orderStep5}>
-                        <button
-                            style={{
-                                height: '30px',
-                                width: '100px',
-                                background: '#e9e9e9',
-                                borderRadius: '10px',
-                            }}
-                            type="button"
-                        >
-                            стр. ГОТОВ
-                        </button>
-                    </Link>
-                </div>
-
                 <div className="orderpage__step-4_img-car">
                     <img src={car.thumbnail.path} alt={car.name} />
                 </div>

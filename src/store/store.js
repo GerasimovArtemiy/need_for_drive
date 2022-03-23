@@ -5,6 +5,7 @@ import FetchLocationReducer from './Slices/FetchLocationSlice';
 import FetchCarsReducer from './Slices/FetchCarsSlice';
 import FetchMoreReducer from './Slices/fetchMoreSlice';
 import TotalStepReducer from './Slices/TotalSlice';
+import FetchTotalReducer from './Slices/fetchTotalSlice';
 
 export default configureStore({
     reducer: {
@@ -14,5 +15,6 @@ export default configureStore({
         fetchCars: FetchCarsReducer,
         fetchMore: FetchMoreReducer,
         totalStep: TotalStepReducer,
+        fetchTotal: FetchTotalReducer,
     },
 });

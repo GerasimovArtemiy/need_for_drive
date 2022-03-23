@@ -6,5 +6,7 @@ const APILinks = {
     cars: 'db/car',
     сarsByClass: 'db/car?categoryId=',
     tariff: 'db/rate',
+    order: 'db/order/',
+    orderStatus: 'db/orderStatus',
 };
 export default APILinks;
