@@ -13,7 +13,7 @@
             position: relative;
             &-empty-1 {
                 position: absolute;
-                top: -403px;
+                top: 0;
                 left: 0;
             }
             &-empty-2 {
@@ -50,27 +50,6 @@
 
             @media screen and (max-width: 767px) {
                 align-self: auto;
-            }
-        }
-        &_price {
-            font-size: 16px;
-            margin: 32px 0;
-            & span {
-                font-family: $bold;
-            }
-        }
-        &_btn {
-            height: 48px;
-            border-radius: 8px;
-            background-color: #eee;
-            color: rgb(255, 255, 255);
-            font-size: 18px;
-            font-family: $medium;
-
-            @media screen and (max-width: 1439px) {
-                font-size: 16px;
-                height: 42px;
-                margin-bottom: 16px;
             }
         }
     }

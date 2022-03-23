@@ -7,8 +7,8 @@
         color: $main-black;
 
         @media screen and (max-width: 767px) {
+            width: 225px;
             margin: 0 16px;
-            width: auto;
         }
     }
     &_map {
