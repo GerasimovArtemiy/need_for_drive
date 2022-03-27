@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/need_for_drive/static/css/main.1d19b448.css",
-    "main.js": "/need_for_drive/static/js/main.132ab089.js",
+    "main.js": "/need_for_drive/static/js/main.17457a91.js",
     "static/js/787.859d4105.chunk.js": "/need_for_drive/static/js/787.859d4105.chunk.js",
     "static/media/Roboto-Bold.svg": "/need_for_drive/static/media/Roboto-Bold.43841e35c236fddb18f1.svg",
     "static/media/Roboto-Light.svg": "/need_for_drive/static/media/Roboto-Light.094e956d58ab400956e2.svg",
@@ -38,11 +38,11 @@
     "static/media/placemark.svg": "/need_for_drive/static/media/placemark.c961018a89ef1f0da3c21f3cc6bb3785.svg",
     "static/media/order-arrow_nav.svg": "/need_for_drive/static/media/order-arrow_nav.ba4fa0999feaf41ba05e32f2fd2098f4.svg",
     "main.1d19b448.css.map": "/need_for_drive/static/css/main.1d19b448.css.map",
-    "main.132ab089.js.map": "/need_for_drive/static/js/main.132ab089.js.map",
+    "main.17457a91.js.map": "/need_for_drive/static/js/main.17457a91.js.map",
     "787.859d4105.chunk.js.map": "/need_for_drive/static/js/787.859d4105.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d19b448.css",
-    "static/js/main.132ab089.js"
+    "static/js/main.17457a91.js"
   ]
 }
