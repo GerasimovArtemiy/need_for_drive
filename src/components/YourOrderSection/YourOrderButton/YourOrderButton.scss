@@ -27,4 +27,18 @@
             background: $button-active;
         }
     }
+    &-cancel {
+        height: 48px;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #493013 0%, #7b0c3b 100%);
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: $medium;
+        &:hover {
+            background: linear-gradient(90deg, #422b10 0%, #6b0a33 100%);
+        }
+        &:active {
+            background: linear-gradient(90deg, #3f2910 0%, #61092d 100%);
+        }
+    }
 }

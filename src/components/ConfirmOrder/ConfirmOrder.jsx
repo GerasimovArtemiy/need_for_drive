@@ -12,48 +12,51 @@ export default function ConfirmOrder() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { orderModal } = useSelector((state) => state.totalStep);
-    const { city, point, car, color, dateFrom, dateTo, tariff, totalPrice, extraServices } = useSelector(
-        (state) => state.allForm
-    );
+    const allForm = useSelector((state) => state.allForm);
     const { order } = useSelector((state) => state.fetchTotal);
 
-    function sendOrder() {
+    function sendOrder(orderItems) {
         dispatch(
             postOrder({
                 orderStatusId: orderStatusNew,
                 cityId: {
-                    name: city.name,
-                    id: city.id,
+                    name: orderItems.city.name,
+                    id: orderItems.city.id,
                 },
                 pointId: {
-                    name: point.name,
-                    id: point.id,
+                    name: orderItems.point.name,
+                    id: orderItems.point.id,
                 },
-                carId: car,
-                color,
-                dateFrom: Date.parse(dateFrom),
-                dateTo: Date.parse(dateTo),
-                rateId: tariff,
-                price: totalPrice,
-                isFullTank: extraServices[0].checked,
-                isNeedChildChair: extraServices[1].checked,
-                isRightWheel: extraServices[2].checked,
+                carId: orderItems.car,
+                color: orderItems.color,
+                dateFrom: Date.parse(orderItems.dateFrom),
+                dateTo: Date.parse(orderItems.dateTo),
+                rateId: orderItems.tariff,
+                price: orderItems.totalPrice,
+                isFullTank: orderItems.extraServices[0].checked,
+                isNeedChildChair: orderItems.extraServices[1].checked,
+                isRightWheel: orderItems.extraServices[2].checked,
             })
         );
     }
     useEffect(() => {
         if (order.status === 'resolved') {
-            navigate(`${routerPath.orderPage}ID:${order.data.id}`);
+            navigate(`${routerPath.orderPage}${order.data.id}`);
             dispatch(setOrderModal(false));
         }
     }, [order.status]);
+
     return (
         <MyModal visible={orderModal} setVisible={() => dispatch(setOrderModal(!orderModal))}>
             {order.status === null || order.status === 'loading' ? (
                 <div className="orderpage__step-4_modal">
                     <h1>Подтвердить заказ</h1>
                     <div className="orderpage__step-4_modal-btns">
-                        <button onClick={() => sendOrder()} className="orderpage__step-4_modal-btn " type="button">
+                        <button
+                            onClick={() => sendOrder(allForm)}
+                            className="orderpage__step-4_modal-btn "
+                            type="button"
+                        >
                             Подтвердить
                         </button>
                         <button

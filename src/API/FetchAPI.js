@@ -43,4 +43,11 @@ export default class FetchAPI {
     static async getOrderById(orderId) {
         return responseAPI.get(`${APILinks.order}${orderId}`);
     }
+
+    static async deleteOrder(order) {
+        return responseAPI.put(`${APILinks.order}${order.id}`, {
+            ...order,
+            orderStatusId: { name: 'Отмененые', id: '5e26a1f5099b810b946c5d8c' },
+        });
+    }
 }

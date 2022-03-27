@@ -3,12 +3,8 @@ import './MyRadioButton.scss';
 
 export default function MyRadioButton({ name, checked, value, onChange }) {
     function showLabelText(labelText) {
-        if (labelText === 'color') {
-            return value;
-        }
-        if (labelText === 'tariff') {
-            return `${value.rateTypeId?.name}, ${value.price}₽ / ${value.rateTypeId?.unit}`;
-        }
+        if (labelText === 'color') return value;
+        if (labelText === 'tariff') return `${value.rateTypeId?.name}, ${value.price}₽ / ${value.rateTypeId?.unit}`;
         return value.name;
     }
 

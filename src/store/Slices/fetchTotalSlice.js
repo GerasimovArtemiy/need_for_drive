@@ -15,6 +15,10 @@ export const getOrderById = createAsyncThunk('order/getOrderById', async (orderI
     const response = await FetchAPI.getOrderById(orderId);
     return response.data.data;
 });
+export const deleteOrder = createAsyncThunk('order/deleteOrder', async (order) => {
+    const response = await FetchAPI.deleteOrder(order);
+    return response.data.data;
+});
 
 const fetchTotalSlice = createSlice({
     name: 'fetchTotal',
@@ -47,6 +51,21 @@ const fetchTotalSlice = createSlice({
             }
         });
         builder.addCase(getOrderById.rejected, (state) => {
+            state.order.status = 'rejected';
+        });
+
+        builder.addCase(deleteOrder.pending, (state) => {
+            state.order.status = 'loading';
+        });
+        builder.addCase(deleteOrder.fulfilled, (state, action) => {
+            if (action.payload) {
+                state.order.data = action.payload;
+                state.order.status = 'resolved';
+            } else {
+                state.order.status = 'rejected';
+            }
+        });
+        builder.addCase(deleteOrder.rejected, (state) => {
             state.order.status = 'rejected';
         });
     },

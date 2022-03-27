@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
+import { deleteOrder } from '../../../store/Slices/fetchTotalSlice';
 import { setOrderModal } from '../../../store/Slices/TotalSlice';
 import routerPath from '../../Routes/routerPath';
 import './YourOrderButton.scss';
@@ -10,6 +11,7 @@ export default function YourOrderButton() {
     const navigate = useNavigate();
     const location = useLocation();
     const { locationStep, carStep, moreStep, totalStep } = useSelector((state) => state.validPage);
+    const { order } = useSelector((state) => state.fetchTotal);
 
     function isDisable(path) {
         switch (path) {
@@ -36,7 +38,10 @@ export default function YourOrderButton() {
             case routerPath.orderStep4:
                 return () => dispatch(setOrderModal(true));
             default:
-                return null;
+                if (order.data.orderStatusId?.name === 'Новые') {
+                    return () => dispatch(deleteOrder(order.data));
+                }
+                return () => navigate(routerPath.homePage);
         }
     }
     function changeTitle(path) {
@@ -50,7 +55,10 @@ export default function YourOrderButton() {
             case routerPath.orderStep4:
                 return 'Заказать';
             default:
-                return 'Отменить';
+                if (order.data.orderStatusId?.name === 'Новые') {
+                    return 'Отменить';
+                }
+                return 'На главную';
         }
     }
 
@@ -60,6 +68,7 @@ export default function YourOrderButton() {
             className={classNames({
                 'orderpage__your-order_btn': isDisable(location.pathname),
                 'orderpage__your-order_btn-active': !isDisable(location.pathname),
+                'orderpage__your-order_btn-cancel': changeTitle(location.pathname) === 'Отменить',
             })}
             disabled={isDisable(location.pathname)}
             onClick={showNextStep(location.pathname)}

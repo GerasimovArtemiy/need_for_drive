@@ -81,6 +81,25 @@ export const AllFormSlice = createSlice({
         resetForm(state) {
             return { ...state, ...initialState };
         },
+        recoveryOrder(state, { payload }) {
+            state.city = payload.cityId;
+            state.point = { name: payload.pointId.address, id: payload.pointId.id };
+            state.car = payload.carId;
+            state.dateFrom = new Date(payload.dateFrom);
+            state.dateTo = new Date(payload.dateTo);
+            state.tariff = payload.rateId;
+            state.totalPrice = payload.price;
+            state.color = payload.color;
+            state.extraServices[0] = payload.isFullTank
+                ? { ...state.extraServices[0], checked: true }
+                : { ...state.extraServices[0], checked: false };
+            state.extraServices[1] = payload.isNeedChildChair
+                ? { ...state.extraServices[1], checked: true }
+                : { ...state.extraServices[1], checked: false };
+            state.extraServices[2] = payload.isRightWheel
+                ? { ...state.extraServices[2], checked: true }
+                : { ...state.extraServices[2], checked: false };
+        },
     },
 });
 
@@ -99,6 +118,7 @@ export const {
     setTotatalPrice,
     resetExtraServices,
     resetForm,
+    recoveryOrder,
 } = AllFormSlice.actions;
 
 export default AllFormSlice.reducer;
