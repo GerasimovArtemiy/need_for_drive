@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/need_for_drive/static/css/main.1d19b448.css",
-    "main.js": "/need_for_drive/static/js/main.132ab089.js",
+    "main.js": "/need_for_drive/static/js/main.dd770eff.js",
     "static/js/787.859d4105.chunk.js": "/need_for_drive/static/js/787.859d4105.chunk.js",
     "static/media/Roboto-Bold.svg": "/need_for_drive/static/media/Roboto-Bold.43841e35c236fddb18f1.svg",
     "static/media/Roboto-Light.svg": "/need_for_drive/static/media/Roboto-Light.094e956d58ab400956e2.svg",
@@ -23,7 +23,6 @@
     "static/media/Roboto-Medium.woff": "/need_for_drive/static/media/Roboto-Medium.e7a9333a0c8dfba3b0c4.woff",
     "static/media/Roboto-Bold.woff": "/need_for_drive/static/media/Roboto-Bold.0c0d860adb5c46c1b4ba.woff",
     "static/media/Roboto-Regular.woff": "/need_for_drive/static/media/Roboto-Regular.3cb3664a212a2a50b399.woff",
-    "static/media/instagram_icon.svg": "/need_for_drive/static/media/instagram_icon.014895444d67a88ece3e5069f3f99c3b.svg",
     "static/media/slick.svg": "/need_for_drive/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/need_for_drive/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/need_for_drive/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -31,18 +30,17 @@
     "static/media/slick.woff": "/need_for_drive/static/media/slick.295183786cd8a1389865.woff",
     "static/media/telegram_icon.svg": "/need_for_drive/static/media/telegram_icon.21e35b3ca6c8c9d1477f43b2502674a6.svg",
     "index.html": "/need_for_drive/index.html",
-    "static/media/facebook_icon.svg": "/need_for_drive/static/media/facebook_icon.313b9d095df47b4e4874fa77fbb019d3.svg",
     "static/media/checkbox-icon.svg": "/need_for_drive/static/media/checkbox-icon.599a4157a9af0498854e.svg",
     "static/media/slider-arrow_left.svg": "/need_for_drive/static/media/slider-arrow_left.1752ae9160db5265a941.svg",
     "static/media/slider-arrow_right.svg": "/need_for_drive/static/media/slider-arrow_right.7591c327fb5160f95b31.svg",
     "static/media/placemark.svg": "/need_for_drive/static/media/placemark.c961018a89ef1f0da3c21f3cc6bb3785.svg",
     "static/media/order-arrow_nav.svg": "/need_for_drive/static/media/order-arrow_nav.ba4fa0999feaf41ba05e32f2fd2098f4.svg",
     "main.1d19b448.css.map": "/need_for_drive/static/css/main.1d19b448.css.map",
-    "main.132ab089.js.map": "/need_for_drive/static/js/main.132ab089.js.map",
+    "main.dd770eff.js.map": "/need_for_drive/static/js/main.dd770eff.js.map",
     "787.859d4105.chunk.js.map": "/need_for_drive/static/js/787.859d4105.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d19b448.css",
-    "static/js/main.132ab089.js"
+    "static/js/main.dd770eff.js"
   ]
 }
